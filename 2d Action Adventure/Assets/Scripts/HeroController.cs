@@ -30,7 +30,6 @@ public class HeroController : MonoBehaviour
 	{
 		CheckForAttackInput();
 
-		Debug.Log (doubleJump);
 		if ((grounded || !doubleJump) && Input.GetButtonDown ("Jump")) 
 		{
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
