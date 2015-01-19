@@ -7,36 +7,29 @@ public class HeroController : MonoBehaviour
 	public GameObject bottomATK;
 	public GameObject topATK;
 
+	private HeroStats stats;
+
 	bool grounded = false;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
-	public float jumpForce = 700f;
 	bool doubleJump = false;
-	
-	public float baseSpeed = 10f;
+
 	bool facingRight = true;
-
-	public float attackSpeed = 1.0f;
 	private float nextAttack = 0.0f;
-
 
 	void Start() 
 	{
-	
+		stats = (HeroStats) GetComponent(typeof(HeroStats));
 	}
 
 	void Update()
 	{
-		CheckForAttackInput();
+		CheckForAttackInput ();
+		CheckForBoostInput ();
+		CheckForSwitch ();
+		CanDoubleJump ();
 
-		if ((grounded || !doubleJump) && Input.GetButtonDown ("Jump")) 
-		{
-			rigidbody2D.AddForce(new Vector2(0, jumpForce));
-			
-			if(!doubleJump && !grounded)
-				doubleJump = true;
-		}
 	}
 
 	void FixedUpdate() 
@@ -45,55 +38,75 @@ public class HeroController : MonoBehaviour
 
 	}
 
+	void CheckForSwitch ()
+	{
+		if(Input.GetButtonDown ("Cycle Forward"))
+		{
+			if(stats.elementType != 3)
+				stats.elementType++;
+			else if(stats.elementType == 3)
+				stats.elementType = 0;
+
+		}
+		if (Input.GetButtonDown ("Cycle Backward"))
+		{
+			if(stats.elementType != 0)
+				stats.elementType--;
+			else if(stats.elementType == 0)
+				stats.elementType = 3;
+		}
+	}
+
+	void CanDoubleJump ()
+	{
+		if ((grounded || !doubleJump) && Input.GetButtonDown ("Jump")) {
+			rigidbody2D.AddForce (new Vector2 (0, stats.jumpForce));
+			if (!doubleJump && !grounded)
+				doubleJump = true;
+		}
+	}
+
+	void CheckForBoostInput ()
+	{
+		if (Input.GetButtonDown ("Boost") && stats.GetBoostCounter() > 0 )
+		{
+			Vector2 currentDirection = new Vector2(Input.GetAxis ("Horizontal") , Input.GetAxis ("Vertical"));
+			rigidbody2D.AddForce(currentDirection * stats.boostForce);
+		}
+	}
+
 	void CheckForAttackInput()
 	{
 		//may need multiple depending on what axis is held down
-		if ((Input.GetAxis("Vertical") < -0.9f) && Mathf.Abs(Input.GetAxis("Horizontal")) < 0.2f && Input.GetButton ("Quick Attack") && Time.time > nextAttack) 
+		if (IsDownAttack ()) 
 		{
-			nextAttack = Time.time + attackSpeed;
-			bottomATK.collider2D.enabled = true;
-			bottomATK.GetComponent<SpriteRenderer>().enabled = true;
-			StartCoroutine(HitBoxLifeTime(bottomATK));
+			SpawnBottomHitBox ();
 		}
-		else if ((Input.GetAxis("Vertical") > 0.9f) && Mathf.Abs(Input.GetAxis("Horizontal")) < 0.2f && Input.GetButton ("Quick Attack") && Time.time > nextAttack) 
+		else if (IsUpAttack()) 
 		{
-			nextAttack = Time.time + attackSpeed;
-			topATK.collider2D.enabled = true;
-			topATK.GetComponent<SpriteRenderer>().enabled = true;
-			StartCoroutine(HitBoxLifeTime(topATK));
+			SpawnTopHitBox ();
 		}
-		else if(Input.GetButton ("Quick Attack") && Time.time > nextAttack)
+		else if(IsQuickAttack())
 		{
-			nextAttack = Time.time + attackSpeed;
-			forwardATK.collider2D.enabled = true;
-			forwardATK.GetComponent<SpriteRenderer>().enabled = true;
-			StartCoroutine(HitBoxLifeTime(forwardATK));
+			SpawnFrontHitBox ();
 		}
 	}
-	IEnumerator HitBoxLifeTime(GameObject hitBox)
-	{
-		yield return new WaitForFixedUpdate ();
-		hitBox.collider2D.enabled = false;
-		hitBox.GetComponent<SpriteRenderer>().enabled = false;
 
-	}
 	void UpdateMovement()
 	{
 		float move = Input.GetAxis ("Horizontal");
-		rigidbody2D.velocity = new Vector2 (move * baseSpeed, rigidbody2D.velocity.y);
+		rigidbody2D.velocity = new Vector2 (move * stats.baseSpeed, rigidbody2D.velocity.y);
 		
 		if (move > 0 && !facingRight)
 			Flip ();
 		else if (move < 0 && facingRight)
 			Flip ();
-
-		//TEMPORARY JUMPING
+		
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		if (grounded)
 			doubleJump = false;
-
-
 	}
+	
 	void Flip()
 	{
 		facingRight = !facingRight;
@@ -102,4 +115,65 @@ public class HeroController : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
+	IEnumerator HitBoxLifeTime(GameObject hitBox)
+	{
+		yield return new WaitForFixedUpdate ();
+		hitBox.collider2D.enabled = false;
+		hitBox.GetComponent<SpriteRenderer>().enabled = false;
+
+	}
+
+	void SpawnFrontHitBox ()
+	{
+		nextAttack = Time.time + stats.attackSpeed;
+		forwardATK.collider2D.enabled = true;
+		forwardATK.GetComponent<SpriteRenderer> ().enabled = true;
+		StartCoroutine (HitBoxLifeTime (forwardATK));
+	}
+
+	void SpawnTopHitBox ()
+	{
+		nextAttack = Time.time + stats.attackSpeed;
+		topATK.collider2D.enabled = true;
+		topATK.GetComponent<SpriteRenderer> ().enabled = true;
+		StartCoroutine (HitBoxLifeTime (topATK));
+	}
+
+	void SpawnBottomHitBox ()
+	{
+		nextAttack = Time.time + stats.attackSpeed;
+		bottomATK.collider2D.enabled = true;
+		bottomATK.GetComponent<SpriteRenderer> ().enabled = true;
+		StartCoroutine (HitBoxLifeTime (bottomATK));
+	}
+
+	bool IsQuickAttack()
+	{
+		if (Input.GetButton ("Quick Attack") && Time.time > nextAttack) 
+		{
+			return true;
+		} 
+		else
+			return false;
+	}
+
+	bool IsUpAttack()
+	{
+		if ((Input.GetAxis ("Vertical") > 0.9f) && Mathf.Abs (Input.GetAxis ("Horizontal")) < 0.2f && Input.GetButton ("Quick Attack") && Time.time > nextAttack) 
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+
+	bool IsDownAttack()
+	{
+		if ((Input.GetAxis ("Vertical") < -0.9f) && Mathf.Abs (Input.GetAxis ("Horizontal")) < 0.2f && Input.GetButton ("Quick Attack") && Time.time > nextAttack)
+		{
+			return true;		
+		}
+		else
+			return false;
+	}
 }
