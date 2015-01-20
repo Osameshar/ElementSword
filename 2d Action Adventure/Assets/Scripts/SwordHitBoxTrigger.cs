@@ -17,7 +17,6 @@ public class SwordHitBoxTrigger : MonoBehaviour
 			Stats currentStats;
 			currentStats = (Stats) other.GetComponent(typeof(Stats));
 			currentStats.takeDamage (heroStats.damage, heroStats.elementType , heroStats.attackType);
-			//Destroy (other.gameObject);
 		}
 	}
 }

@@ -14,9 +14,7 @@ public class HeroController : MonoBehaviour
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
 	bool doubleJump = false;
-
 	bool facingRight = true;
-	private float nextAttack = 0.0f;
 
 	void Start() 
 	{
@@ -29,13 +27,12 @@ public class HeroController : MonoBehaviour
 		CheckForBoostInput ();
 		CheckForSwitch ();
 		CanDoubleJump ();
-
+		UpdateMovement();
 	}
 
 	void FixedUpdate() 
 	{
-		UpdateMovement();
-
+		//UpdateMovement();
 	}
 
 	void CheckForSwitch ()
@@ -70,26 +67,32 @@ public class HeroController : MonoBehaviour
 	{
 		if (Input.GetButtonDown ("Boost") && stats.GetBoostCounter() > 0 )
 		{
+
 			Vector2 currentDirection = new Vector2(Input.GetAxis ("Horizontal") , Input.GetAxis ("Vertical"));
 			rigidbody2D.AddForce(currentDirection * stats.boostForce);
+			stats.SetBoostCounter(stats.GetBoostCounter() - 1);
 		}
 	}
 
 	void CheckForAttackInput()
 	{
 		//may need multiple depending on what axis is held down
-		if (IsDownAttack ()) 
+		if(IsQuickAttack())
 		{
-			SpawnBottomHitBox ();
+		   if (IsDownAttack ()) 
+			{
+				SpawnBottomHitBox ();
+			}
+			else if (IsUpAttack()) 
+			{
+				SpawnTopHitBox ();
+			}
+			else
+			{
+				SpawnFrontHitBox ();
+			}
 		}
-		else if (IsUpAttack()) 
-		{
-			SpawnTopHitBox ();
-		}
-		else if(IsQuickAttack())
-		{
-			SpawnFrontHitBox ();
-		}
+
 	}
 
 	void UpdateMovement()
@@ -125,7 +128,7 @@ public class HeroController : MonoBehaviour
 
 	void SpawnFrontHitBox ()
 	{
-		nextAttack = Time.time + stats.attackSpeed;
+		stats.SetNextAttack(Time.time + stats.attackSpeed);
 		forwardATK.collider2D.enabled = true;
 		forwardATK.GetComponent<SpriteRenderer> ().enabled = true;
 		StartCoroutine (HitBoxLifeTime (forwardATK));
@@ -133,7 +136,7 @@ public class HeroController : MonoBehaviour
 
 	void SpawnTopHitBox ()
 	{
-		nextAttack = Time.time + stats.attackSpeed;
+		stats.SetNextAttack(Time.time + stats.attackSpeed);
 		topATK.collider2D.enabled = true;
 		topATK.GetComponent<SpriteRenderer> ().enabled = true;
 		StartCoroutine (HitBoxLifeTime (topATK));
@@ -141,7 +144,7 @@ public class HeroController : MonoBehaviour
 
 	void SpawnBottomHitBox ()
 	{
-		nextAttack = Time.time + stats.attackSpeed;
+		stats.SetNextAttack(Time.time + stats.attackSpeed);
 		bottomATK.collider2D.enabled = true;
 		bottomATK.GetComponent<SpriteRenderer> ().enabled = true;
 		StartCoroutine (HitBoxLifeTime (bottomATK));
@@ -149,7 +152,7 @@ public class HeroController : MonoBehaviour
 
 	bool IsQuickAttack()
 	{
-		if (Input.GetButton ("Quick Attack") && Time.time > nextAttack) 
+		if (Input.GetButton ("Quick Attack") && Time.time > stats.GetNextAttack()) 
 		{
 			return true;
 		} 
@@ -159,7 +162,7 @@ public class HeroController : MonoBehaviour
 
 	bool IsUpAttack()
 	{
-		if ((Input.GetAxis ("Vertical") > 0.9f) && Mathf.Abs (Input.GetAxis ("Horizontal")) < 0.2f && Input.GetButton ("Quick Attack") && Time.time > nextAttack) 
+		if ((Input.GetAxis ("Vertical") > 0.9f) && Mathf.Abs (Input.GetAxis ("Horizontal")) < 0.2f )
 		{
 			return true;
 		}
@@ -169,7 +172,7 @@ public class HeroController : MonoBehaviour
 
 	bool IsDownAttack()
 	{
-		if ((Input.GetAxis ("Vertical") < -0.9f) && Mathf.Abs (Input.GetAxis ("Horizontal")) < 0.2f && Input.GetButton ("Quick Attack") && Time.time > nextAttack)
+		if ((Input.GetAxis ("Vertical") < -0.9f) && Mathf.Abs (Input.GetAxis ("Horizontal")) < 0.2f)
 		{
 			return true;		
 		}
