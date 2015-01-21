@@ -8,7 +8,7 @@ public class HeroController : MonoBehaviour
 	public GameObject topATK;
 
 	private HeroStats stats;
-
+	private bool blinking = false;
 	bool grounded = false;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
@@ -23,18 +23,15 @@ public class HeroController : MonoBehaviour
 
 	void Update()
 	{
-		CheckForAttackInput ();
-		CheckForBoostInput ();
-		CheckForSwitch ();
-		CanDoubleJump ();
-		UpdateMovement();
+		if(!blinking)
+		{
+			CheckForAttackInput ();
+			CheckForBlinkInput ();
+			CheckForSwitch ();
+			CanDoubleJump ();
+			UpdateMovement();
+		}
 	}
-
-	void FixedUpdate() 
-	{
-		//UpdateMovement();
-	}
-
 	void CheckForSwitch ()
 	{
 		if(Input.GetButtonDown ("Cycle Forward"))
@@ -63,17 +60,31 @@ public class HeroController : MonoBehaviour
 		}
 	}
 
-	void CheckForBoostInput ()
+	void CheckForBlinkInput ()
 	{
-		if (Input.GetButtonDown ("Boost") && stats.GetBoostCounter() > 0 )
+		if (Input.GetButtonDown ("Boost") && stats.GetBlinkCounter() > 0 )
 		{
-
-			Vector2 currentDirection = new Vector2(Input.GetAxis ("Horizontal") , Input.GetAxis ("Vertical"));
-			rigidbody2D.AddForce(currentDirection * stats.boostForce);
-			stats.SetBoostCounter(stats.GetBoostCounter() - 1);
+			rigidbody2D.gravityScale = 0;
+			rigidbody2D.velocity = new Vector2 (0,0);
+			rigidbody2D.AddForce(new Vector2(stats.blinkSpeed,0));
+			StartCoroutine(StartBlink ());
+			stats.SetBlinkCounter(stats.GetBlinkCounter() - 1);
 		}
+//		if(Input.GetButtonDown ("LeftBlink") && stats.GetBlinkCounter() > 0 )
+//		{
+//			rigidbody2D.velocity.Set(-stats.blinkSpeed,0);
+		//	StartCoroutine(StartBlink ());
+//			stats.SetBlinkCounter(stats.GetBlinkCounter() - 1);
+//		}
 	}
-
+	IEnumerator StartBlink()
+	{
+		Debug.Log ("inco");
+		blinking = true;
+		yield return new WaitForSeconds (0.5f);
+		rigidbody2D.gravityScale = 5;
+		blinking = false;
+	}
 	void CheckForAttackInput()
 	{
 		//may need multiple depending on what axis is held down

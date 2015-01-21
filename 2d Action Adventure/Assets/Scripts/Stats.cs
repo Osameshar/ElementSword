@@ -4,12 +4,15 @@ using System.Collections;
 public class Stats : MonoBehaviour {
 
 	private HeroStats heroStats;
+	private float currentFireStackDuration = 0f;
+	private float fireStackDuration = 10f;
 	private float currentPoisonStackDuration = 0f;
 	private float currentPoisonDamageTicker = 1f;
 	private float poisonDamageTicker = 1f;
 	private float poisonStackDuration = 10f;
 	private float currentFrostStackDuration = 0f;
 	private float frostStackDuration = 10f;
+	private float nextSecond = 0f;
 
 	public int health = 100;
 	public float attackSpeed = 1f;
@@ -20,6 +23,7 @@ public class Stats : MonoBehaviour {
 	public int poisonDamage = 1;
 	public float frostEffectMovement = 1f;
 	public float frostEffectAttack = .1f;
+	public int fireMultiplier = 2;
 
 	public int[] stacks = new int[3] {0,0,0}; //fire, frost, poison 
 	// Use this for initialization
@@ -29,17 +33,22 @@ public class Stats : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+		if (Time.time > nextSecond)
+		{
+			nextSecond = Time.time + 1f;
+			CheckFireDuration ();
+			CheckPoisonDamage ();
+			CheckPoisonDuration ();
+			CheckFrostDuration ();
+		}
 
-		CheckPoisonDamage ();
-		CheckPoisonDuration ();
-		CheckFrostDuration ();
 		CheckDeath ();
 	}
 	
 	public void takeDamage(int heroDamage, int elementType, int attackType)
 	{
-		health -= heroDamage; 
+		health -= heroDamage + (stacks [0] * fireMultiplier);
 		CheckDeath ();
 		if(elementType < 3 && attackType == 1 && stacks[elementType] < maxStacks)
 	    {
@@ -93,6 +102,14 @@ public class Stats : MonoBehaviour {
 		}
 	}
 
+	void CheckFireDuration ()
+	{
+		if (Time.time > currentFireStackDuration && stacks[0] > 0) {
+			currentFireStackDuration = Time.time + fireStackDuration;
+			stacks[0]--;
+		}
+	}
+
 	void CheckPoisonDamage ()
 	{
 		if (Time.time > currentPoisonDamageTicker && stacks[2] > 0) {
@@ -128,7 +145,7 @@ public class Stats : MonoBehaviour {
 	{
 		if(stacks[0] == 1)
 		{
-		//	currentFireStackDuration = Time.time + fireStackDuration;
+			currentFireStackDuration = Time.time + fireStackDuration;
 		}
 	}
 	void frostEffect ()

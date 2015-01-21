@@ -3,16 +3,16 @@ using System.Collections;
 
 public class HeroStats : MonoBehaviour {
 
-	private int boostCounter = 0;//change this
-	private const int maxBoost = 3;
-	private float nextBoost = 10f;
+	private int blinkCounter = 3;//change this
+	private const int maxBlink = 3;
+	private float nextBlink = 10f;
 	private float currentWindStackDuration = 0f;
 	private int windStacks = 0;
 	private float nextAttack = 1f;
 
-	public float boostRecharge = 10f;
+	public float blinkRecharge = 10f;
 	public float jumpForce = 700f;
-	public float boostForce = 1000f;
+	public float blinkSpeed = 1000f;
 	public float attackSpeed = 1.0f;
 	public float baseSpeed = 10f;
 	public int damage = 10;
@@ -24,17 +24,18 @@ public class HeroStats : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		nextAttack = Time.time + attackSpeed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		CheckBoostRecharge ();
+		CheckBlinkRecharge ();
 		CheckWindDuration ();
 	}
 
-	public int GetBoostCounter()
+	public int GetBlinkCounter()
 	{
-		return boostCounter;
+		return blinkCounter;
 	}
 	public int GetWindStacks()
 	{
@@ -45,9 +46,9 @@ public class HeroStats : MonoBehaviour {
 		return nextAttack;
 	}
 
-	public void SetBoostCounter (int newBoostCounter)
+	public void SetBlinkCounter (int newBlinkCounter)
 	{
-		boostCounter = newBoostCounter;
+		blinkCounter = newBlinkCounter;
 	}
 
 	public void SetNextAttack (float newNextAttack)
@@ -55,11 +56,11 @@ public class HeroStats : MonoBehaviour {
 		nextAttack = newNextAttack;
 	}
 
-	void CheckBoostRecharge ()
+	void CheckBlinkRecharge ()
 	{
-		if (Time.time > nextBoost && boostCounter < maxBoost) {
-			nextBoost = Time.time + boostRecharge;
-			boostCounter++;
+		if (Time.time > nextBlink && blinkCounter < maxBlink) {
+			nextBlink = Time.time + blinkRecharge;
+			blinkCounter++;
 			Debug.Log("up");
 		}
 	}
