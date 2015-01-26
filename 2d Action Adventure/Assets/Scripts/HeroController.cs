@@ -16,9 +16,12 @@ public class HeroController : MonoBehaviour
 	bool doubleJump = false;
 	bool facingRight = true;
 
+	Animator anim;
+
 	void Start() 
 	{
 		stats = (HeroStats) GetComponent(typeof(HeroStats));
+		anim = GetComponent<Animator> ();
 	}
 
 	void Update()
@@ -109,6 +112,7 @@ public class HeroController : MonoBehaviour
 	void UpdateMovement()
 	{
 		float move = Input.GetAxis ("Horizontal");
+		anim.SetFloat("Speed", Mathf.Abs(move));
 		rigidbody2D.velocity = new Vector2 (move * stats.baseSpeed, rigidbody2D.velocity.y);
 		
 		if (move > 0 && !facingRight)
