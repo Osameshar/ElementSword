@@ -16,6 +16,8 @@ public class HeroController : MonoBehaviour
 	bool doubleJump = false;
 	bool facingRight = true;
 
+	float nextAttack = 0.0f;
+
 	void Start() 
 	{
 		stats = (HeroStats) GetComponent(typeof(HeroStats));
@@ -25,7 +27,11 @@ public class HeroController : MonoBehaviour
 	{
 		if(!blinking)
 		{
-			CheckForAttackInput ();
+			if(Time.time > nextAttack)
+			{
+				nextAttack = Time.time + stats.attackSpeed;
+				CheckForAttackInput ();
+			}
 			CheckForBlinkInput ();
 			CheckForSwitch ();
 			CanDoubleJump ();
@@ -62,7 +68,7 @@ public class HeroController : MonoBehaviour
 
 	void CheckForBlinkInput ()
 	{
-		if (Input.GetButtonDown ("Boost") && stats.GetBlinkCounter() > 0 )
+		if (Input.GetAxis("RightBlink") > 0 && stats.GetBlinkCounter() > 0 )
 		{
 			rigidbody2D.gravityScale = 0;
 			rigidbody2D.velocity = new Vector2 (0,0);
@@ -70,16 +76,17 @@ public class HeroController : MonoBehaviour
 			StartCoroutine(StartBlink ());
 			stats.SetBlinkCounter(stats.GetBlinkCounter() - 1);
 		}
-//		if(Input.GetButtonDown ("LeftBlink") && stats.GetBlinkCounter() > 0 )
-//		{
-//			rigidbody2D.velocity.Set(-stats.blinkSpeed,0);
-		//	StartCoroutine(StartBlink ());
-//			stats.SetBlinkCounter(stats.GetBlinkCounter() - 1);
-//		}
+		if(Input.GetAxis("LeftBlink") > 0 && stats.GetBlinkCounter() > 0 )
+		{
+			rigidbody2D.gravityScale = 0;
+			rigidbody2D.velocity = new Vector2 (0,0);
+			rigidbody2D.AddForce(new Vector2(-stats.blinkSpeed,0));
+			StartCoroutine(StartBlink ());
+			stats.SetBlinkCounter(stats.GetBlinkCounter() - 1);
+		}
 	}
 	IEnumerator StartBlink()
 	{
-		Debug.Log ("inco");
 		blinking = true;
 		yield return new WaitForSeconds (0.5f);
 		rigidbody2D.gravityScale = 5;
@@ -102,6 +109,22 @@ public class HeroController : MonoBehaviour
 			{
 				SpawnFrontHitBox ();
 			}
+		}
+		else if(IsStrongAttack())
+		{
+			if (IsDownAttack ())
+			{
+				//SpawnStrongBottomHitBox();
+			}
+			else if( IsUpAttack())
+			{
+			//	SpawnStrongTopHitBox ();
+			}
+			else
+			{
+			//	SpawnStrongHitBox();
+			}
+
 		}
 
 	}
@@ -159,6 +182,16 @@ public class HeroController : MonoBehaviour
 		bottomATK.collider2D.enabled = true;
 		bottomATK.GetComponent<SpriteRenderer> ().enabled = true;
 		StartCoroutine (HitBoxLifeTime (bottomATK));
+	}
+
+	bool IsStrongAttack ()
+	{
+		if (Input.GetButton ("Strong Attack") && Time.time > stats.GetNextAttack ()) 
+		{
+			return true;
+		}
+		else
+			return false;
 	}
 
 	bool IsQuickAttack()
