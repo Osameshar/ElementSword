@@ -74,21 +74,7 @@ public class CombatMechanics : MonoBehaviour {
 		else if (attackType == 2)
 		{
 			
-			switch(elementType)
-			{
-			case 0:
-				//effect of fire
-				break;
-			case 1:
-				//effect of frost
-				break;
-			case 2:
-				//effect of poison
-				break;
-			case 3:
-				//effect of wind
-				break;				
-			}
+			//strong attack
 			
 		}
 	}

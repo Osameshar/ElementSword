@@ -11,7 +11,7 @@ public class HeroStats : MonoBehaviour {
 	private float nextAttack = 1f;
 
 	public float blinkRecharge = 10f;
-	public float jumpForce = 700f;
+	public float jumpForce = 1000f;
 	public float blinkSpeed = 1000f;
 	public float attackSpeed = 1.0f;
 	public float baseSpeed = 10f;

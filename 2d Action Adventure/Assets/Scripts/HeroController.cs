@@ -18,9 +18,12 @@ public class HeroController : MonoBehaviour
 
 	float nextAttack = 0.0f;
 
+	Animator anim;
+
 	void Start() 
 	{
 		stats = (HeroStats) GetComponent(typeof(HeroStats));
+		anim = GetComponent<Animator> ();
 	}
 
 	void Update()
@@ -60,6 +63,9 @@ public class HeroController : MonoBehaviour
 	void CanDoubleJump ()
 	{
 		if ((grounded || !doubleJump) && Input.GetButtonDown ("Jump")) {
+			Vector2 v = rigidbody2D.velocity;
+			v.y = 0;
+			rigidbody2D.velocity = v;
 			rigidbody2D.AddForce (new Vector2 (0, stats.jumpForce));
 			if (!doubleJump && !grounded)
 				doubleJump = true;
@@ -97,6 +103,7 @@ public class HeroController : MonoBehaviour
 		//may need multiple depending on what axis is held down
 		if(IsQuickAttack())
 		{
+			stats.attackType = 1;
 		   if (IsDownAttack ()) 
 			{
 				SpawnBottomHitBox ();
@@ -112,17 +119,18 @@ public class HeroController : MonoBehaviour
 		}
 		else if(IsStrongAttack())
 		{
+			stats.attackType = 2;
 			if (IsDownAttack ())
 			{
-				//SpawnStrongBottomHitBox();
+				SpawnBottomHitBox();
 			}
 			else if( IsUpAttack())
 			{
-			//	SpawnStrongTopHitBox ();
+				SpawnTopHitBox ();
 			}
 			else
 			{
-			//	SpawnStrongHitBox();
+				SpawnFrontHitBox();
 			}
 
 		}
@@ -132,6 +140,7 @@ public class HeroController : MonoBehaviour
 	void UpdateMovement()
 	{
 		float move = Input.GetAxis ("Horizontal");
+		anim.SetFloat("Speed",Mathf.Abs (move));
 		rigidbody2D.velocity = new Vector2 (move * stats.baseSpeed, rigidbody2D.velocity.y);
 		
 		if (move > 0 && !facingRight)
