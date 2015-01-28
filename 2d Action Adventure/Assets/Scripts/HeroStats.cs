@@ -8,7 +8,7 @@ public class HeroStats : MonoBehaviour {
 	private float nextBlink = 10f;
 	private float currentWindStackDuration = 0f;
 	private int windStacks = 0;
-	private float nextAttack = 1f;
+	private float nextAttack = 1f; //remove
 
 	public float blinkRecharge = 10f;
 	public float jumpForce = 1000f;
