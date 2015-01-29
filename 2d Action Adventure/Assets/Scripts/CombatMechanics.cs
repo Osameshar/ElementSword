@@ -25,7 +25,8 @@ public class CombatMechanics : MonoBehaviour {
 	public int[] stacks = new int[3] {0,0,0}; //fire, frost, poison 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		GameObject go = GameObject.Find ("Hero");
 		heroStats = (HeroStats) go.GetComponent(typeof(HeroStats));
 		stats = (Stats)GetComponent (typeof(Stats));
@@ -67,16 +68,16 @@ public class CombatMechanics : MonoBehaviour {
 				break;
 			}
 		}
-		else if(elementType == 3 && attackType == 1 && heroStats.GetWindStacks() < maxStacks)
-		{
-			heroStats.AddWindStack();
-		}
-		else if (attackType == 2)
-		{
-			
-			//strong attack
-			
-		}
+//		else if(elementType == 3 && attackType == 1 && heroStats.GetWindStacks() < maxStacks)
+//		{
+//			heroStats.AddWindStack();
+//		}
+//		else if (attackType == 2)
+//		{
+//			
+//			//strong attack
+//			
+//		}
 	}
 
 	void CheckFireDuration ()

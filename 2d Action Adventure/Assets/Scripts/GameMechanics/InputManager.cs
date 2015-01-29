@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InputManager : MonoBehaviour {
+public class InputManager : MonoBehaviour 
+{
 
 	// Use this for initialization
 	private HeroController controller;
+	private CombatManager combat;
 	void Start () 
 	{
 		GameObject hc = GameObject.FindGameObjectWithTag ("Player");
 		controller = hc.GetComponent<HeroController>();
+		combat = hc.GetComponent<CombatManager> ();
 	}
 	
 	// Update is called once per frame
@@ -55,33 +58,33 @@ public class InputManager : MonoBehaviour {
 	{
 		if(Input.GetButtonDown ("Cycle Forward"))
 		{
-			controller.CycleElementForward ();
+			combat.CycleElementForward ();
 			
 		}
 		if (Input.GetButtonDown ("Cycle Backward"))
 		{
-			controller.CycleElementBackward ();
+			combat.CycleElementBackward ();
 		}
 	}
 
 	void CheckForAttackInput()
 	{
 		//may need multiple depending on what axis is held down
-		if(controller.CanAttack())
+		if(combat.CanAttack())
 		{
 			if(IsQuickAttack())
 			{
 				if (IsDownAttack ()) 
 				{
-					controller.SpawnBottomHitBox ();
+					combat.SpawnBottomHitBox ();
 				}
 				else if (IsUpAttack()) 
 				{
-					controller.SpawnTopHitBox ();
+					combat.SpawnTopHitBox ();
 				}
 				else
 				{
-					controller.SpawnFrontHitBox ();
+					combat.SpawnFrontHitBox ();
 				}
 				
 			}
@@ -89,15 +92,15 @@ public class InputManager : MonoBehaviour {
 			{
 				if (IsDownAttack ())
 				{
-					controller.SpawnStrongBottomHitBox();
+					combat.SpawnStrongBottomHitBox();
 				}
 				else if( IsUpAttack())
 				{
-					controller.SpawnStrongTopHitBox ();
+					combat.SpawnStrongTopHitBox ();
 				}
 				else
 				{
-					controller.SpawnStrongFrontHitBox();
+					combat.SpawnStrongFrontHitBox();
 				}
 				
 			}
