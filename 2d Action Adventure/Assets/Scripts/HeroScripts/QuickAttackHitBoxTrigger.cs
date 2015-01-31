@@ -5,6 +5,7 @@ public class QuickAttackHitBoxTrigger : MonoBehaviour
 {
 	private CombatManager combat;
 	private GameObject player;
+
 	void Start() 
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -18,4 +19,5 @@ public class QuickAttackHitBoxTrigger : MonoBehaviour
 			combat.GetCurrentAttack().ExecuteAttack(other.gameObject,player);
 		}
 	}
+
 }

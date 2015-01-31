@@ -3,11 +3,9 @@ using System.Collections;
 
 public class AttackLibrary : MonoBehaviour 
 {
-
-
 	private Hashtable allAttacks;
 
-	void Start()
+	void Awake()
 	{
 		allAttacks = new Hashtable ();
 		allAttacks.Add ("QuickFire", new QuickFire ());
@@ -20,6 +18,6 @@ public class AttackLibrary : MonoBehaviour
 
 	public Attack GetAttackByName(string name)
 	{
-		return (Attack) allAttacks [name];
+		return (Attack)allAttacks [name];
 	}
 }

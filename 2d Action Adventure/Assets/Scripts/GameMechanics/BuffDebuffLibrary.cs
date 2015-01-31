@@ -6,7 +6,7 @@ public class BuffDebuffLibrary : MonoBehaviour
 
 	private Hashtable allBuffDebuffs;
 
-	void Start()
+	void Awake()
 	{
 		allBuffDebuffs = new Hashtable();
 		allBuffDebuffs.Add ("QuickFireDebuff", new QuickFireDebuff ());

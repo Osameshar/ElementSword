@@ -7,7 +7,6 @@ public class QuickWind : Attack,DefaultAttack
 	private float damage;
 	private string nextAttack;
 	private string previousAttack;
-	private BuffDebuff buff;
 
 	public QuickWind()
 	{
@@ -17,13 +16,12 @@ public class QuickWind : Attack,DefaultAttack
 		nextAttack = "QuickFire";
 		previousAttack = "QuickPoison";
 		damage = 10;
-		buff = lib.GetBuffDebuffByName ("QuickWindBuff");
-		
 	}
 	
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
-		//TODO
+		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, null);
+		player.GetComponent<BuffDebuffManager> ().AddBuffDebuff (new QuickWindBuff());
 	}
 	
 	public string GetNextAttack()

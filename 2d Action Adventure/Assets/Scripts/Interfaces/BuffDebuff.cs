@@ -4,11 +4,14 @@ using System.Collections;
 public interface BuffDebuff
 
 {
+	int GetRemainingDuration();
 
-	void onApply ();
+	string GetName();
 
-	void onSecond ();
+	void onApply (Stats stats);
 
-	void onEnd();
+	void onSecond (Stats stats);
+
+	void onEnd(Stats stats);
 
 }

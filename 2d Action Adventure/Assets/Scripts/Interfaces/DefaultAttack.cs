@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public interface DefaultAttack  
+public interface DefaultAttack : Attack
 {
 	string GetNextAttack();
 

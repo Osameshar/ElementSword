@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HeroController : MonoBehaviour 
 {
-	private HeroStats stats;
+	private Stats stats;
 	private bool blinking = false;
 	private bool grounded = false;
 	public Transform groundCheck;
@@ -17,7 +17,7 @@ public class HeroController : MonoBehaviour
 
 	void Start() 
 	{
-		stats = (HeroStats) GetComponent(typeof(HeroStats));
+		stats = GetComponent<Stats> ();
 		anim = GetComponent<Animator> ();
 	}
 
@@ -86,7 +86,7 @@ public class HeroController : MonoBehaviour
 	public void MoveHero(float move)
 	{
 		anim.SetFloat("Speed",Mathf.Abs (move));
-		rigidbody2D.velocity = new Vector2 (move * stats.baseSpeed, rigidbody2D.velocity.y);
+		rigidbody2D.velocity = new Vector2 (move * stats.GetCurrentMovementSpeed(), rigidbody2D.velocity.y);
 		
 		if (move > 0 && !facingRight)
 			Flip ();

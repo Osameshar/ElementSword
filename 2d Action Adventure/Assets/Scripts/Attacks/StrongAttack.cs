@@ -12,6 +12,7 @@ public class StrongAttack : Attack
 
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
-		//TODO
+		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, null);
+		player.GetComponent<CombatManager> ().GetEquippedSpells ().CastSpell (enemy, player, enemy.GetComponent<BuffDebuffManager> ().GetElementStacks ());
 	}
 }

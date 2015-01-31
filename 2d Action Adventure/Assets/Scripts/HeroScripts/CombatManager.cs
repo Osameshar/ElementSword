@@ -4,7 +4,7 @@ using System.Collections;
 public class CombatManager : MonoBehaviour 
 {
 
-	private HeroStats stats;
+	private Stats stats;
 	private float nextAttack = 0.0f;
 
 	public GameObject forwardATK;
@@ -14,27 +14,33 @@ public class CombatManager : MonoBehaviour
 	public GameObject strongBottomATK;
 	public GameObject strongTopATK;
 
-	private Hashtable equipedSpells;
 	private Attack currentAttack;
 	private Attack strongAttack;
 	private AttackLibrary attackLibrary;
-
-
+	private SpellBook equippedSpells;
 	// Use this for initialization
 	void Start () 
 	{
-		stats = GetComponent<HeroStats> ();
+		stats = GetComponent<Stats> ();
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		attackLibrary = libs.GetComponent<AttackLibrary>();
 
+		equippedSpells = new SpellBook ();
+
 		currentAttack = attackLibrary.GetAttackByName ("QuickFire");
 		strongAttack = attackLibrary.GetAttackByName ("StrongAttack");
+	}
+
+	public SpellBook GetEquippedSpells ()
+	{
+		return equippedSpells;
 	}
 
 	public Attack GetCurrentAttack()
 	{
 		return currentAttack;
 	}
+
 	public Attack GetStrongAttack()
 	{
 		return strongAttack;
