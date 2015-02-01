@@ -46,33 +46,22 @@ public class HeroController : MonoBehaviour
 //	TODO
 	public void BlinkRight ()
 	{
-//		if (stats.GetBlinkCounter() > 0 )
-//		{
-//			rigidbody2D.gravityScale = 0;
-//			rigidbody2D.velocity = new Vector2 (0, 0);
-//			rigidbody2D.AddForce (new Vector2 (stats.blinkSpeed, 0));
-//			StartCoroutine (StartBlink ());
-//			stats.SetBlinkCounter (stats.GetBlinkCounter () - 1);
-//		}
+
+		transform.position = new Vector3 (transform.position.x + 5, transform.position.y, 0);
+
 	}
-//
+
 	public void BlinkLeft ()
 	{
-//		if (stats.GetBlinkCounter() > 0 )
-//		{
-//			rigidbody2D.gravityScale = 0;
-//			rigidbody2D.velocity = new Vector2 (0, 0);
-//			rigidbody2D.AddForce (new Vector2 (-stats.blinkSpeed, 0));
-//			StartCoroutine (StartBlink ());
-//			stats.SetBlinkCounter (stats.GetBlinkCounter () - 1);
-//		}
+		//transform.Translate (new Vector3 (transform.position.x - 1, transform.position.y -1, 0));
+		transform.position = new Vector3 (transform.position.x - 5, transform.position.y, 0);
+
 	}
-//	
+	
 //	IEnumerator StartBlink()
 //	{
 //		blinking = true;
-//		yield return new WaitForSeconds (0.5f);
-//		rigidbody2D.gravityScale = 5;
+//		yield return new WaitForSeconds (2f);
 //		blinking = false;
 //	}
 

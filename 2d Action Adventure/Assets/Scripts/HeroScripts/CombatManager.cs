@@ -14,9 +14,13 @@ public class CombatManager : MonoBehaviour
 	public GameObject strongBottomATK;
 	public GameObject strongTopATK;
 
+	private bool invulnerable = false;
+	public float timeBetweenDamage = 1f;
+
 	private Attack currentAttack;
 	private Attack strongAttack;
 	private AttackLibrary attackLibrary;
+	private BuffDebuffManager bdManager;
 	private SpellBook equippedSpells;
 	// Use this for initialization
 	void Start () 
@@ -24,6 +28,8 @@ public class CombatManager : MonoBehaviour
 		stats = GetComponent<Stats> ();
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		attackLibrary = libs.GetComponent<AttackLibrary>();
+
+		bdManager = GetComponent<BuffDebuffManager> ();
 
 		equippedSpells = new SpellBook ();
 
@@ -115,5 +121,21 @@ public class CombatManager : MonoBehaviour
 		else
 			return false;
 	}
-	
+
+	public void TakeDamage(float damage, BuffDebuff bd)
+	{
+		if (invulnerable)
+			return;
+		damage = damage/stats.toughness;
+		stats.health -= damage;//multiply by toughness or whatever formula we need to use
+		if(bd != null)
+			bdManager.AddBuffDebuff (bd);
+		invulnerable = true;
+		StartCoroutine (InvulnerableTime ());
+	}
+	IEnumerator InvulnerableTime()
+	{
+		yield return new WaitForSeconds(timeBetweenDamage);
+		invulnerable = false;
+	}
 }

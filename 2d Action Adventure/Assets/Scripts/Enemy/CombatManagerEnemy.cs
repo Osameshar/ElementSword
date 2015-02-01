@@ -16,7 +16,10 @@ public class CombatManagerEnemy : MonoBehaviour
 	void Update () {
 	
 	}
-
+	public float GetDamage()
+	{
+		return stats.damage;
+	}
 	public void TakeDamage(float damage, BuffDebuff bd)
 	{
 		damage = damage/stats.toughness;
