@@ -14,6 +14,10 @@ public class CombatManager : MonoBehaviour
 	public GameObject strongBottomATK;
 	public GameObject strongTopATK;
 
+	public Transform projSpawn;
+	public GameObject projectileRight;
+	public GameObject projectileLeft;
+
 	private bool invulnerable = false;
 	public float timeBetweenDamage = 1f;
 
@@ -46,7 +50,6 @@ public class CombatManager : MonoBehaviour
 	{
 		return currentAttack;
 	}
-
 	public Attack GetStrongAttack()
 	{
 		return strongAttack;
@@ -114,7 +117,16 @@ public class CombatManager : MonoBehaviour
 		strongBottomATK.GetComponent<SpriteRenderer> ().enabled = true;
 		StartCoroutine (HitBoxLifeTime (strongBottomATK));
 	}
-
+	public void SpawnProjectileRight()
+	{
+		Instantiate (projectileRight, projSpawn.position,transform.rotation);
+		nextAttack = (Time.time + stats.attackSpeed);
+	}
+	public void SpawnProjectileLeft()
+	{
+		Instantiate (projectileLeft, projSpawn.position,transform.rotation);
+		nextAttack = (Time.time + stats.attackSpeed);
+	}
 	public bool CanAttack()
 	{
 		if(Time.time > nextAttack)

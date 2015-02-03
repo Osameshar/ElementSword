@@ -20,10 +20,12 @@ public class InputManager : MonoBehaviour
 		if(!controller.isBlinking())
 		{
 			CheckForAttackInput ();
+			CheckForProjectileInput();
 			CheckForBlinkInput ();
 			CheckForElementSwitchInput ();
 			CheckJumpInput ();
 			CheckHorizontalInput();
+
 		}
 	}
 
@@ -67,6 +69,16 @@ public class InputManager : MonoBehaviour
 		}
 	}
 
+	void CheckForProjectileInput()
+	{
+		if (combat.CanAttack ())
+		{
+			if (Input.GetButtonDown ("Projectile Attack")) 
+			{
+				controller.SpawnProjectileAttack();
+			}
+		}
+	}
 	void CheckForAttackInput()
 	{
 		//may need multiple depending on what axis is held down

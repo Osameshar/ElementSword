@@ -14,9 +14,10 @@ public class HeroController : MonoBehaviour
 	private bool facingRight = true;
 
 	private Animator anim;
-
+	private CombatManager combat;
 	void Start() 
 	{
+		combat = GetComponent<CombatManager> ();
 		stats = GetComponent<Stats> ();
 		anim = GetComponent<Animator> ();
 	}
@@ -82,7 +83,13 @@ public class HeroController : MonoBehaviour
 		else if (move < 0 && facingRight)
 			Flip ();
 	}
-	
+	public void SpawnProjectileAttack()
+	{
+		if (!facingRight)
+			combat.SpawnProjectileRight();
+		else
+			combat.SpawnProjectileLeft();
+	}
 	void Flip()
 	{
 		facingRight = !facingRight;

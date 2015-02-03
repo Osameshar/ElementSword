@@ -7,12 +7,14 @@ public class QuickPoison : Attack,DefaultAttack
 	private float damage;
 	private string nextAttack;
 	private string previousAttack;
+	private Attack projectileMode;
 
 	public QuickPoison()
 	{
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		lib = libs.GetComponent<BuffDebuffLibrary> ();
-		
+
+		projectileMode = new ProjectilePoison ();
 		nextAttack = "QuickWind";
 		previousAttack = "QuickFrost";
 		damage = 10;
@@ -32,5 +34,9 @@ public class QuickPoison : Attack,DefaultAttack
 	public string GetPreviousAttack()
 	{
 		return previousAttack;
+	}
+	public Attack GetProjectileMode()
+	{
+		return projectileMode;
 	}
 }

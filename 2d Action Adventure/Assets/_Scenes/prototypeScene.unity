@@ -105,6 +105,7 @@ Transform:
   - {fileID: 1853716739}
   - {fileID: 1125668136}
   - {fileID: 428684263}
+  - {fileID: 58750766}
   m_Father: {fileID: 873760524}
   m_RootOrder: 0
 --- !u!1 &40653097
@@ -171,6 +172,33 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: da29e04164f294b5e9908c1e2b92f985, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &58750765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 58750766}
+  m_Layer: 8
+  m_Name: projSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &58750766
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 58750765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.48000002, y: .579999983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 29188535}
+  m_RootOrder: 6
 --- !u!1001 &91756717
 Prefab:
   m_ObjectHideFlags: 0
@@ -364,7 +392,7 @@ BoxCollider2D:
     type: 2}
   m_PrefabInternal: {fileID: 695260395}
   m_GameObject: {fileID: 269724243}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
@@ -1418,6 +1446,22 @@ Prefab:
       propertyPath: health
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 11480212, guid: d8b02903bf9c57d459a2640e1631f1fd, type: 2}
+      propertyPath: projectileRight
+      value: 
+      objectReference: {fileID: 140800, guid: 100d2415dc26c2647b96e2d9371fec90, type: 2}
+    - target: {fileID: 11480212, guid: d8b02903bf9c57d459a2640e1631f1fd, type: 2}
+      propertyPath: projectileLeft
+      value: 
+      objectReference: {fileID: 152274, guid: 9d7dfdc2c3de9164ba745b6281a0c2ac, type: 2}
+    - target: {fileID: 11480212, guid: d8b02903bf9c57d459a2640e1631f1fd, type: 2}
+      propertyPath: projSpawn
+      value: 
+      objectReference: {fileID: 58750766}
+    - target: {fileID: 6180218, guid: d8b02903bf9c57d459a2640e1631f1fd, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8b02903bf9c57d459a2640e1631f1fd, type: 2}
   m_RootGameObject: {fileID: 873760523}
@@ -1701,6 +1745,9 @@ MonoBehaviour:
   strongForwardATK: {fileID: 1853716738}
   strongBottomATK: {fileID: 1125668135}
   strongTopATK: {fileID: 428684262}
+  projSpawn: {fileID: 58750766}
+  projectileRight: {fileID: 140800, guid: 100d2415dc26c2647b96e2d9371fec90, type: 2}
+  projectileLeft: {fileID: 152274, guid: 9d7dfdc2c3de9164ba745b6281a0c2ac, type: 2}
   timeBetweenDamage: 1
 --- !u!114 &873760528
 MonoBehaviour:

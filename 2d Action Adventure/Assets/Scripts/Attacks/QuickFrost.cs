@@ -7,13 +7,14 @@ public class QuickFrost : Attack,DefaultAttack
 	private float damage;
 	private string nextAttack;
 	private string previousAttack;
-
+	private Attack projectileMode;
 	
 	public QuickFrost()
 	{
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		lib = libs.GetComponent<BuffDebuffLibrary> ();
-		
+
+		projectileMode = new ProjectileFrost ();
 		nextAttack = "QuickPoison";
 		previousAttack = "QuickFire";
 		damage = 10;
@@ -33,5 +34,9 @@ public class QuickFrost : Attack,DefaultAttack
 	public string GetPreviousAttack()
 	{
 		return previousAttack;
+	}
+	public Attack GetProjectileMode()
+	{
+		return projectileMode;
 	}
 }

@@ -7,13 +7,14 @@ public class QuickFire : Attack,DefaultAttack
 	private float damage;
 	private string nextAttack;
 	private string previousAttack;
-
+	private Attack projectileMode;
 
 	public QuickFire()
 	{
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		lib = libs.GetComponent<BuffDebuffLibrary> ();
 
+		projectileMode = new ProjectileFire ();
 		nextAttack = "QuickFrost";
 		previousAttack = "QuickWind";
 		damage = 10;
@@ -34,5 +35,8 @@ public class QuickFire : Attack,DefaultAttack
 	{
 		return previousAttack;
 	}
-
+	public Attack GetProjectileMode()
+	{
+		return projectileMode;
+	}
 }
