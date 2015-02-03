@@ -3,7 +3,6 @@ using System.Collections;
 
 public class QuickPoisonDebuff : BuffDebuff
 {	
-	private int baseDuration;
 	private int remainingDuration;
 	private string name;
 	private float debuffStrength;
@@ -11,8 +10,7 @@ public class QuickPoisonDebuff : BuffDebuff
 	public QuickPoisonDebuff()
 	{
 		name = "QuickPoisonDebuff";
-		baseDuration = 10;
-		remainingDuration = baseDuration;
+		remainingDuration = 10;
 		debuffStrength = 5f;//dps
 	}
 
@@ -33,7 +31,7 @@ public class QuickPoisonDebuff : BuffDebuff
 	
 	public void onSecond (Stats stats)
 	{
-		stats.health -= debuffStrength;
+		stats.gameObject.GetComponent<CombatManagerEnemy>().TakeDamage(debuffStrength,null);
 		remainingDuration--;		
 	}
 	

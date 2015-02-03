@@ -3,7 +3,6 @@ using System.Collections;
 
 public class QuickFrostDebuff : BuffDebuff 
 {
-	private int baseDuration;
 	private int remainingDuration;
 	private string name;
 	private float debuffStrength;
@@ -11,8 +10,7 @@ public class QuickFrostDebuff : BuffDebuff
 	public QuickFrostDebuff()
 	{
 		name = "QuickFrostDebuff";
-		baseDuration = 10;
-		remainingDuration = baseDuration;
+		remainingDuration = 10;
 		debuffStrength = 0.1f;
 	}
 

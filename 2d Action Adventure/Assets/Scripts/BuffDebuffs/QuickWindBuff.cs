@@ -3,7 +3,6 @@ using System.Collections;
 
 public class QuickWindBuff : BuffDebuff 
 {
-	private int baseDuration;
 	private int remainingDuration;
 	private string name;
 	private float buffStrength;
@@ -11,8 +10,7 @@ public class QuickWindBuff : BuffDebuff
 	public QuickWindBuff()
 	{
 		name = "QuickWindBuff";
-		baseDuration = 10;
-		remainingDuration = baseDuration;
+		remainingDuration = 10;
 		buffStrength = 0.1f;
 	}
 

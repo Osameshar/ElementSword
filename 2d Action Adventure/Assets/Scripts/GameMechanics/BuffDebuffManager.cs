@@ -11,7 +11,7 @@ public class BuffDebuffManager : MonoBehaviour
 	void Start () 
 	{
 		stats = GetComponent<Stats> ();
-		elementStacks = new int[3]{0,0,0};//FIRE,POISON,FROST
+		elementStacks = new int[3]{0,0,0};//FIRE,FROST,POISON
 		currentBuffDebuffs = new ArrayList ();
 		toRemoveBuffDebuffs = new ArrayList ();
 		InvokeRepeating ("EachSecond", 0f, 1.0f);
@@ -27,11 +27,14 @@ public class BuffDebuffManager : MonoBehaviour
 	{
 		return elementStacks;
 	}
-	public void clearStacks()
+	public void ClearStacks()
 	{
 		elementStacks [0] = 0;
 		elementStacks [1] = 0;
 		elementStacks [2] = 0;
+		RemoveBuffDeBuff ("QuickFireDebuff");
+		RemoveBuffDeBuff ("QuickFrostDebuff");
+		RemoveBuffDeBuff ("QuickPoisonDebuff");
 	}
 	void EachSecond()
 	{
@@ -106,7 +109,18 @@ public class BuffDebuffManager : MonoBehaviour
 		}
 	}
 
-
-
-
+	public void RemoveBuffDeBuff (string name)
+	{
+		ArrayList duplicate = new ArrayList ();
+		foreach (BuffDebuff bd in currentBuffDebuffs) 
+		{
+			if(bd.GetName().Equals(name))
+				duplicate.Add(bd);
+		}
+		foreach (BuffDebuff bd in duplicate) 
+		{
+			currentBuffDebuffs.Remove (bd);
+		}
+		duplicate.Clear ();
+	}
 }

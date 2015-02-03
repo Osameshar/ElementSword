@@ -13,7 +13,7 @@ public class AttackLibrary : MonoBehaviour
 		allAttacks.Add ("QuickPoison", new QuickPoison ());
 		allAttacks.Add ("QuickWind", new QuickWind ());
 		allAttacks.Add ("StrongAttack", new StrongAttack ());
-
+		allAttacks.Add ("FrostShield", new FrostShield ());
 	}
 
 	public Attack GetAttackByName(string name)

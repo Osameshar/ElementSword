@@ -3,8 +3,8 @@ using System.Collections;
 
 public interface Spell : Attack
 {
-	bool isDiscovered ();
+	bool IsDiscovered ();
 
-	int getComboCode();
+	int GetComboCode();
 
 }

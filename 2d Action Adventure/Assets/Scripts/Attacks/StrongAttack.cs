@@ -14,5 +14,6 @@ public class StrongAttack : Attack
 	{
 		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, null);
 		player.GetComponent<CombatManager> ().GetEquippedSpells ().CastSpell (enemy, player, enemy.GetComponent<BuffDebuffManager> ().GetElementStacks ());
+		enemy.GetComponent<BuffDebuffManager> ().ClearStacks ();
 	}
 }

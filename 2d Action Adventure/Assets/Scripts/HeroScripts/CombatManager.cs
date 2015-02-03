@@ -127,7 +127,17 @@ public class CombatManager : MonoBehaviour
 		if (invulnerable)
 			return;
 		damage = damage/stats.toughness;
-		stats.health -= damage;//multiply by toughness or whatever formula we need to use
+		if(stats.shield < damage)
+		{
+			damage = damage - stats.shield;
+			stats.health -= damage;
+			stats.shield = 0f;
+		}
+		else
+		{
+			stats.shield -= damage;
+		}
+
 		if(bd != null)
 			bdManager.AddBuffDebuff (bd);
 		invulnerable = true;

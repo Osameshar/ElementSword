@@ -11,22 +11,27 @@ public class SpellBook
 		equippedSpells = new Hashtable ();
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		attackLibrary = libs.GetComponent<AttackLibrary>();
+
+		EquipSpell("FrostShield");
 	}
 
 	public void EquipSpell(string spellName)
 	{
 		Spell newSpell = (Spell)attackLibrary.GetAttackByName (spellName);
-		if(equippedSpells.Contains(newSpell.getComboCode ()))
-			equippedSpells.Remove (newSpell.getComboCode ());
-		equippedSpells.Add (newSpell.getComboCode (), newSpell);
+		if(equippedSpells.Contains(newSpell.GetComboCode ()))
+			equippedSpells.Remove (newSpell.GetComboCode ());
+		equippedSpells.Add (newSpell.GetComboCode (), newSpell);
 
 	}
 
 	public void CastSpell(GameObject enemy, GameObject player, int[] numStacks)
 	{
 		int combocode = CalculateCode(numStacks);
-		Spell toCast = (Spell)equippedSpells [combocode];
-		toCast.ExecuteAttack (enemy, player);
+		if (combocode != 0)
+		{
+			Spell toCast = (Spell)equippedSpells [combocode];
+			toCast.ExecuteAttack (enemy, player);
+		}
 	}
 
 	int CalculateCode(int[] numStacks)
