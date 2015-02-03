@@ -55,11 +55,14 @@ public class CombatManager : MonoBehaviour
 	public void CycleElementForward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetNextAttack());
+		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsForward();
 	}
 	
 	public void CycleElementBackward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetPreviousAttack());
+		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsBackward();
+
 	}
 
 	IEnumerator HitBoxLifeTime(GameObject hitBox)
