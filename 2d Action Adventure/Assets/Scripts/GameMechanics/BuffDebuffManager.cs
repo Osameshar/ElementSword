@@ -11,7 +11,7 @@ public class BuffDebuffManager : MonoBehaviour
 	void Start () 
 	{
 		stats = GetComponent<Stats> ();
-		elementStacks = new int[3]{0,0,0};//FIRE,FROST,POISON
+		elementStacks = new int[4]{0,0,0,0};//FIRE,FROST,POISON,WIND
 		currentBuffDebuffs = new ArrayList ();
 		toRemoveBuffDebuffs = new ArrayList ();
 		InvokeRepeating ("EachSecond", 0f, 1.0f);
@@ -64,6 +64,12 @@ public class BuffDebuffManager : MonoBehaviour
 					bd.onEnd(stats);
 					break;
 				}
+				case "QuickWindBuff":
+				{
+					elementStacks[3]--;
+					bd.onEnd(stats);
+					break;
+				}
 				default:
 					bd.onEnd(stats);
 					break;
@@ -101,6 +107,12 @@ public class BuffDebuffManager : MonoBehaviour
 				elementStacks[2]++;
 				bd.onApply(stats);
 				break;
+			}
+			case "QuickWindBuff":
+			{
+				elementStacks[3]++;
+				bd.onApply(stats);
+				break;	
 			}
 			default:
 				bd.onApply(stats);

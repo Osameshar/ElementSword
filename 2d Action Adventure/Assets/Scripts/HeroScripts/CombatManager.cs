@@ -20,7 +20,6 @@ public class CombatManager : MonoBehaviour
 
 	private bool invulnerable = false;
 	public float timeBetweenDamage = 1f;
-
 	private Attack currentAttack;
 	private Attack strongAttack;
 	private AttackLibrary attackLibrary;
@@ -54,7 +53,6 @@ public class CombatManager : MonoBehaviour
 	{
 		return strongAttack;
 	}
-	
 	public void CycleElementForward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetNextAttack());

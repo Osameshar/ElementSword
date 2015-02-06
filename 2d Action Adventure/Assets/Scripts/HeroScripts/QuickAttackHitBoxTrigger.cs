@@ -7,6 +7,7 @@ public class QuickAttackHitBoxTrigger : MonoBehaviour
 	private GameObject player;
 	private GameObject gui;
 	private EnemyHealthBar bar;
+	private StackNumbers stackNum;
 
 	void Start() 
 	{
@@ -14,6 +15,7 @@ public class QuickAttackHitBoxTrigger : MonoBehaviour
 		combat = player.GetComponent<CombatManager>();
 		gui = GameObject.FindGameObjectWithTag ("GUIManager");
 		bar = gui.GetComponent<EnemyHealthBar> ();
+		stackNum = gui.GetComponent<StackNumbers> ();
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) 
@@ -22,6 +24,7 @@ public class QuickAttackHitBoxTrigger : MonoBehaviour
 		{
 			combat.GetCurrentAttack().ExecuteAttack(other.gameObject,player);
 			bar.updateGameObject(other.gameObject);
+			stackNum.updateIconsOnHit(other.gameObject);
 		}
 	}
 

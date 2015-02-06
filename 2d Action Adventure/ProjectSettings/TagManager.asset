@@ -5,9 +5,7 @@ TagManager:
   tags:
   - Enemy
   - Libraries
-  - EnemyFrame
   - GUIManager
-  - PlayerFrame
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

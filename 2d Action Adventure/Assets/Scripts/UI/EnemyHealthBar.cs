@@ -5,13 +5,12 @@ using UnityEngine.UI;
 public class EnemyHealthBar : MonoBehaviour {
 
 	private GameObject enemyFrame;
-	private GameObject enemy;
 	private Stats stats;
-	private Slider s;
+	private Slider enemySlider;
 	private bool activeFrame;
 	// Use this for initialization
 	void Start () {
-		enemyFrame = GameObject.FindGameObjectWithTag ("EnemyFrame");
+		enemyFrame = GameObject.Find("EnemyPanel");
 		activeFrame = false;
 		enemyFrame.SetActive (false);
 
@@ -21,7 +20,7 @@ public class EnemyHealthBar : MonoBehaviour {
 	void Update () {
 		if(activeFrame)
 		{
-			s.value = stats.health;
+			enemySlider.value = stats.health;
 		}
 	}
 
@@ -35,9 +34,8 @@ public class EnemyHealthBar : MonoBehaviour {
 		}
 		if(activeFrame == true)
 		{
-			enemy = go;
-			stats = enemy.GetComponent<Stats> ();
-			s = enemyFrame.GetComponentInChildren<Slider>();
+			stats = go.GetComponent<Stats> ();
+			enemySlider = enemyFrame.GetComponentInChildren<Slider>();
 		}
 
 	}
