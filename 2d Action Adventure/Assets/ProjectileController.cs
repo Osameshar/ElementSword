@@ -9,6 +9,8 @@ public class ProjectileController : MonoBehaviour
 	private CombatManager combat;
 	private DefaultAttack Dattack;
 	private Attack attack;
+	private StackNumbers stackNum;
+
 	void Start() 
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -17,6 +19,7 @@ public class ProjectileController : MonoBehaviour
 		bar = gui.GetComponent<EnemyHealthBar> ();
 		Dattack = (DefaultAttack)combat.GetCurrentAttack();
 		attack = Dattack.GetProjectileMode ();
+		stackNum = gui.GetComponent<StackNumbers> ();
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) 
@@ -25,6 +28,7 @@ public class ProjectileController : MonoBehaviour
 		{
 			attack.ExecuteAttack (other.gameObject, player);
 			bar.updateGameObject (other.gameObject);
+			stackNum.updateIconsOnHit(other.gameObject);
 			Destroy(this.gameObject);
 		} else
 			Destroy (this.gameObject);

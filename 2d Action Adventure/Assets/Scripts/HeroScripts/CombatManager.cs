@@ -38,6 +38,13 @@ public class CombatManager : MonoBehaviour
 
 		currentAttack = attackLibrary.GetAttackByName ("QuickFire");
 		strongAttack = attackLibrary.GetAttackByName ("StrongAttack");
+
+		forwardATK.collider2D.enabled = false;
+		bottomATK.collider2D.enabled = false;
+		topATK.collider2D.enabled = false;
+		strongForwardATK.collider2D.enabled = false;
+		strongBottomATK.collider2D.enabled = false;
+		strongTopATK.collider2D.enabled = false;
 	}
 
 	public SpellBook GetEquippedSpells ()
@@ -74,7 +81,7 @@ public class CombatManager : MonoBehaviour
 		nextAttack = (Time.time + stats.attackSpeed);
 		
 	}
-	
+
 	public void SpawnFrontHitBox ()
 	{
 		forwardATK.collider2D.enabled = true;
