@@ -7,13 +7,17 @@ class FrostShieldBuff : BuffDebuff
 	private float shieldAmount;
 	private int remainingDuration;
 	private string name;
+	private AnimatorController personalAnim;
 
 	public FrostShieldBuff (int stacks)
 	{
+		personalAnim = GameObject.FindGameObjectWithTag ("Player").GetComponent<AnimatorController> ();
+
 		shieldStrength = 20f;
 		shieldAmount = stacks * shieldStrength;
 		remainingDuration = 10;
 		name = "FrostShieldBuff";
+
 	}
 
 	public int GetRemainingDuration ()
@@ -29,6 +33,7 @@ class FrostShieldBuff : BuffDebuff
 	public void onApply (Stats stats)
 	{
 		stats.shield = shieldAmount;
+		personalAnim.FrostShieldAnimation (true);
 	}
 
 	public void onSecond (Stats stats)
@@ -39,6 +44,7 @@ class FrostShieldBuff : BuffDebuff
 	public void onEnd (Stats stats)
 	{
 		stats.shield = 0;
+		personalAnim.FrostShieldAnimation (false);
 	}
 }
 

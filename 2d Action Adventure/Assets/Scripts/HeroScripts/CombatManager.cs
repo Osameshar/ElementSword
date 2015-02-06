@@ -27,18 +27,15 @@ public class CombatManager : MonoBehaviour
 	private BuffDebuffManager bdManager;
 	private SpellBook equippedSpells;
 
-	private Animator anim;
-
-	private Animator  forwardAnim;
+	private AnimatorController animatorController;
 	// Use this for initialization
 	void Start () 
 	{
 		stats = GetComponent<Stats> ();
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		attackLibrary = libs.GetComponent<AttackLibrary>();
-
-		anim = GetComponent<Animator> ();
-		forwardAnim = GameObject.Find ("ForwardAnimation").GetComponent<Animator>();
+		
+		animatorController = GetComponent<AnimatorController> ();
 
 		bdManager = GetComponent<BuffDebuffManager> ();
 
@@ -71,68 +68,14 @@ public class CombatManager : MonoBehaviour
 	public void CycleElementForward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetNextAttack());
-		if (currentAttack.GetName ().Equals ("QuickFire")) 
-		{
-			forwardAnim.SetBool("FireEquipped",true);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",false);
-		} 
-		else if (currentAttack.GetName ().Equals ("QuickFrost")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",true);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",false);
-		}
-		else if (currentAttack.GetName ().Equals ("QuickPoison")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",true);
-			forwardAnim.SetBool("WindEquipped",false);
-		}
-		else if (currentAttack.GetName ().Equals ("QuickWind")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",true);
-		}
+		animatorController.UpdateActiveElementVariables (currentAttack);
 		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsForward();
 	}
 	
 	public void CycleElementBackward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetPreviousAttack());
-		if (currentAttack.GetName ().Equals ("QuickFire")) 
-		{
-			forwardAnim.SetBool("FireEquipped",true);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",false);
-		} 
-		else if (currentAttack.GetName ().Equals ("QuickFrost")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",true);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",false);
-		}
-		else if (currentAttack.GetName ().Equals ("QuickPoison")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",true);
-			forwardAnim.SetBool("WindEquipped",false);
-		}
-		else if (currentAttack.GetName ().Equals ("QuickWind")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",true);
-		}
+		animatorController.UpdateActiveElementVariables (currentAttack);
 		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsBackward();
 
 	}
@@ -149,8 +92,7 @@ public class CombatManager : MonoBehaviour
 	public void SpawnFrontHitBox ()
 	{
 		forwardATK.collider2D.enabled = true;
-		anim.SetTrigger ("Attacking");
-		forwardAnim.SetTrigger ("Attacking");
+		animatorController.SetAttacking ();
 		//forwardATK.GetComponent<SpriteRenderer> ().enabled = true;
 		StartCoroutine (HitBoxLifeTime (forwardATK));
 	}
@@ -190,11 +132,13 @@ public class CombatManager : MonoBehaviour
 	}
 	public void SpawnProjectileRight()
 	{
+		animatorController.SetAttacking ();
 		Instantiate (projectileRight, projSpawn.position,transform.rotation);
 		nextAttack = (Time.time + stats.attackSpeed);
 	}
 	public void SpawnProjectileLeft()
 	{
+		animatorController.SetAttacking ();
 		Instantiate (projectileLeft, projSpawn.position,transform.rotation);
 		nextAttack = (Time.time + stats.attackSpeed);
 	}
