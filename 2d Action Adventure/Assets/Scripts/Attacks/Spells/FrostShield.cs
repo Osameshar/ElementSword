@@ -5,15 +5,18 @@ public class FrostShield : Spell {
 
 	private int comboCode;
 	private bool discovered;
-
+	private string name;
 	// Use this for initialization
 	public FrostShield()
 	{
-	
+		name = "FrostShield";
 		comboCode = 10;
 	}
 
-
+	public string GetName()
+	{
+		return name;
+	}
 	public bool IsDiscovered ()
 	{
 		return discovered;

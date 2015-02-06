@@ -8,18 +8,24 @@ public class QuickWind : Attack,DefaultAttack
 	private string nextAttack;
 	private string previousAttack;
 	private Attack projectileMode;
+	private string name;
 
 	public QuickWind()
 	{
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		lib = libs.GetComponent<BuffDebuffLibrary> ();
 
+		name = "QuickWind";
 		projectileMode = new ProjectileWind ();
 		nextAttack = "QuickFire";
 		previousAttack = "QuickPoison";
 		damage = 10;
 	}
-	
+
+	public string GetName()
+	{
+		return name;
+	}
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
 		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, null);

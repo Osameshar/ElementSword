@@ -8,12 +8,14 @@ public class QuickFrost : Attack,DefaultAttack
 	private string nextAttack;
 	private string previousAttack;
 	private Attack projectileMode;
-	
+	private string name;
+
 	public QuickFrost()
 	{
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		lib = libs.GetComponent<BuffDebuffLibrary> ();
 
+		name = "QuickFrost";
 		projectileMode = new ProjectileFrost ();
 		nextAttack = "QuickPoison";
 		previousAttack = "QuickFire";
@@ -21,6 +23,10 @@ public class QuickFrost : Attack,DefaultAttack
 		
 	}
 
+	public string GetName()
+	{
+		return name;
+	}
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
 		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickFrostDebuff());

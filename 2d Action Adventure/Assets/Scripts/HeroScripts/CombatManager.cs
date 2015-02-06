@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class CombatManager : MonoBehaviour 
 {
 
@@ -25,12 +26,19 @@ public class CombatManager : MonoBehaviour
 	private AttackLibrary attackLibrary;
 	private BuffDebuffManager bdManager;
 	private SpellBook equippedSpells;
+
+	private Animator anim;
+
+	private Animator  forwardAnim;
 	// Use this for initialization
 	void Start () 
 	{
 		stats = GetComponent<Stats> ();
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		attackLibrary = libs.GetComponent<AttackLibrary>();
+
+		anim = GetComponent<Animator> ();
+		forwardAnim = GameObject.Find ("ForwardAnimation").GetComponent<Animator>();
 
 		bdManager = GetComponent<BuffDebuffManager> ();
 
@@ -63,12 +71,68 @@ public class CombatManager : MonoBehaviour
 	public void CycleElementForward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetNextAttack());
+		if (currentAttack.GetName ().Equals ("QuickFire")) 
+		{
+			forwardAnim.SetBool("FireEquipped",true);
+			forwardAnim.SetBool("FrostEquipped",false);
+			forwardAnim.SetBool("PoisonEquipped",false);
+			forwardAnim.SetBool("WindEquipped",false);
+		} 
+		else if (currentAttack.GetName ().Equals ("QuickFrost")) 
+		{
+			forwardAnim.SetBool("FireEquipped",false);
+			forwardAnim.SetBool("FrostEquipped",true);
+			forwardAnim.SetBool("PoisonEquipped",false);
+			forwardAnim.SetBool("WindEquipped",false);
+		}
+		else if (currentAttack.GetName ().Equals ("QuickPoison")) 
+		{
+			forwardAnim.SetBool("FireEquipped",false);
+			forwardAnim.SetBool("FrostEquipped",false);
+			forwardAnim.SetBool("PoisonEquipped",true);
+			forwardAnim.SetBool("WindEquipped",false);
+		}
+		else if (currentAttack.GetName ().Equals ("QuickWind")) 
+		{
+			forwardAnim.SetBool("FireEquipped",false);
+			forwardAnim.SetBool("FrostEquipped",false);
+			forwardAnim.SetBool("PoisonEquipped",false);
+			forwardAnim.SetBool("WindEquipped",true);
+		}
 		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsForward();
 	}
 	
 	public void CycleElementBackward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetPreviousAttack());
+		if (currentAttack.GetName ().Equals ("QuickFire")) 
+		{
+			forwardAnim.SetBool("FireEquipped",true);
+			forwardAnim.SetBool("FrostEquipped",false);
+			forwardAnim.SetBool("PoisonEquipped",false);
+			forwardAnim.SetBool("WindEquipped",false);
+		} 
+		else if (currentAttack.GetName ().Equals ("QuickFrost")) 
+		{
+			forwardAnim.SetBool("FireEquipped",false);
+			forwardAnim.SetBool("FrostEquipped",true);
+			forwardAnim.SetBool("PoisonEquipped",false);
+			forwardAnim.SetBool("WindEquipped",false);
+		}
+		else if (currentAttack.GetName ().Equals ("QuickPoison")) 
+		{
+			forwardAnim.SetBool("FireEquipped",false);
+			forwardAnim.SetBool("FrostEquipped",false);
+			forwardAnim.SetBool("PoisonEquipped",true);
+			forwardAnim.SetBool("WindEquipped",false);
+		}
+		else if (currentAttack.GetName ().Equals ("QuickWind")) 
+		{
+			forwardAnim.SetBool("FireEquipped",false);
+			forwardAnim.SetBool("FrostEquipped",false);
+			forwardAnim.SetBool("PoisonEquipped",false);
+			forwardAnim.SetBool("WindEquipped",true);
+		}
 		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsBackward();
 
 	}
@@ -77,7 +141,7 @@ public class CombatManager : MonoBehaviour
 	{
 		yield return new WaitForFixedUpdate ();
 		hitBox.collider2D.enabled = false;
-		hitBox.GetComponent<SpriteRenderer>().enabled = false;
+		//hitBox.GetComponent<SpriteRenderer>().enabled = false;
 		nextAttack = (Time.time + stats.attackSpeed);
 		
 	}
@@ -85,7 +149,9 @@ public class CombatManager : MonoBehaviour
 	public void SpawnFrontHitBox ()
 	{
 		forwardATK.collider2D.enabled = true;
-		forwardATK.GetComponent<SpriteRenderer> ().enabled = true;
+		anim.SetTrigger ("Attacking");
+		forwardAnim.SetTrigger ("Attacking");
+		//forwardATK.GetComponent<SpriteRenderer> ().enabled = true;
 		StartCoroutine (HitBoxLifeTime (forwardATK));
 	}
 	
