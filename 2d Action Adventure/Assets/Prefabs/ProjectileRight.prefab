@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11452272}
   - 114: {fileID: 11452274}
   - 212: {fileID: 21252274}
+  - 95: {fileID: 9546312}
   m_Layer: 0
   m_Name: ProjectileRight
   m_TagString: Untagged
@@ -58,6 +59,21 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!95 &9546312
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f58a47c02d1bac04195ab57b075e509a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11452272
 MonoBehaviour:
   m_ObjectHideFlags: 1

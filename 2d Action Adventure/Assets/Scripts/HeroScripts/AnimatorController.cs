@@ -23,10 +23,14 @@ public class AnimatorController : MonoBehaviour
 	
 	}
 
-	public void SetAttacking ()
+	public void SetForwardAttacking ()
+	{
+		forwardAnim.SetTrigger ("Attacking");
+	}
+
+	public void SetMainAttacking ()
 	{
 		playerAnim.SetTrigger ("Attacking");
-		forwardAnim.SetTrigger ("Attacking");
 	}
 	
 	public void UpdateActiveElementVariables (Attack currentAttack)
@@ -37,6 +41,7 @@ public class AnimatorController : MonoBehaviour
 			forwardAnim.SetBool("FrostEquipped",false);
 			forwardAnim.SetBool("PoisonEquipped",false);
 			forwardAnim.SetBool("WindEquipped",false);
+
 		} 
 		else if (currentAttack.GetName ().Equals ("QuickFrost")) 
 		{
@@ -44,6 +49,7 @@ public class AnimatorController : MonoBehaviour
 			forwardAnim.SetBool("FrostEquipped",true);
 			forwardAnim.SetBool("PoisonEquipped",false);
 			forwardAnim.SetBool("WindEquipped",false);
+
 		}
 		else if (currentAttack.GetName ().Equals ("QuickPoison")) 
 		{
@@ -51,6 +57,7 @@ public class AnimatorController : MonoBehaviour
 			forwardAnim.SetBool("FrostEquipped",false);
 			forwardAnim.SetBool("PoisonEquipped",true);
 			forwardAnim.SetBool("WindEquipped",false);
+
 		}
 		else if (currentAttack.GetName ().Equals ("QuickWind")) 
 		{
@@ -58,9 +65,13 @@ public class AnimatorController : MonoBehaviour
 			forwardAnim.SetBool("FrostEquipped",false);
 			forwardAnim.SetBool("PoisonEquipped",false);
 			forwardAnim.SetBool("WindEquipped",true);
+
 		}
 	}
-
+	public void SetStrong()
+	{
+		forwardAnim.SetTrigger ("Strong");
+	}
 	public void FrostShieldAnimation(bool val)
 	{
 		personalAnim.SetBool ("FrostShield",val);

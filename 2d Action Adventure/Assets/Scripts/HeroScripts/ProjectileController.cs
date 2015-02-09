@@ -10,6 +10,7 @@ public class ProjectileController : MonoBehaviour
 	private DefaultAttack Dattack;
 	private Attack attack;
 	private StackNumbers stackNum;
+	private Animator projectileAnim;
 
 	void Start() 
 	{
@@ -20,6 +21,9 @@ public class ProjectileController : MonoBehaviour
 		Dattack = (DefaultAttack)combat.GetCurrentAttack();
 		attack = Dattack.GetProjectileMode ();
 		stackNum = gui.GetComponent<StackNumbers> ();
+		projectileAnim = GetComponent<Animator> ();
+
+		UpdateActiveElementVariables (Dattack);
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) 
@@ -29,8 +33,39 @@ public class ProjectileController : MonoBehaviour
 			attack.ExecuteAttack (other.gameObject, player);
 			bar.updateGameObject (other.gameObject);
 			stackNum.updateIconsOnHit(other.gameObject);
-			Destroy(this.gameObject);
-		} else
-			Destroy (this.gameObject);
+		}
+		Destroy(this.gameObject);
+	}
+
+	public void UpdateActiveElementVariables (Attack currentAttack)
+	{
+		if (currentAttack.GetName ().Equals ("QuickFire")) 
+		{
+			projectileAnim.SetBool("FireEquipped",true);
+			projectileAnim.SetBool("FrostEquipped",false);
+			projectileAnim.SetBool("PoisonEquipped",false);
+			projectileAnim.SetBool("WindEquipped",false);
+		} 
+		else if (currentAttack.GetName ().Equals ("QuickFrost")) 
+		{
+			projectileAnim.SetBool("FireEquipped",false);
+			projectileAnim.SetBool("FrostEquipped",true);
+			projectileAnim.SetBool("PoisonEquipped",false);
+			projectileAnim.SetBool("WindEquipped",false);
+		}
+		else if (currentAttack.GetName ().Equals ("QuickPoison")) 
+		{
+			projectileAnim.SetBool("FireEquipped",false);
+			projectileAnim.SetBool("FrostEquipped",false);
+			projectileAnim.SetBool("PoisonEquipped",true);
+			projectileAnim.SetBool("WindEquipped",false);
+		}
+		else if (currentAttack.GetName ().Equals ("QuickWind")) 
+		{
+			projectileAnim.SetBool("FireEquipped",false);
+			projectileAnim.SetBool("FrostEquipped",false);
+			projectileAnim.SetBool("PoisonEquipped",false);
+			projectileAnim.SetBool("WindEquipped",true);
+		}
 	}
 }

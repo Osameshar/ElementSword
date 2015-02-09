@@ -92,7 +92,8 @@ public class CombatManager : MonoBehaviour
 	public void SpawnFrontHitBox ()
 	{
 		forwardATK.collider2D.enabled = true;
-		animatorController.SetAttacking ();
+		animatorController.SetMainAttacking ();
+		animatorController.SetForwardAttacking ();
 		//forwardATK.GetComponent<SpriteRenderer> ().enabled = true;
 		StartCoroutine (HitBoxLifeTime (forwardATK));
 	}
@@ -113,7 +114,7 @@ public class CombatManager : MonoBehaviour
 	public void SpawnStrongFrontHitBox ()
 	{
 		strongForwardATK.collider2D.enabled = true;
-		strongForwardATK.GetComponent<SpriteRenderer> ().enabled = true;
+		animatorController.SetStrong ();
 		StartCoroutine (HitBoxLifeTime (strongForwardATK));
 	}
 
@@ -132,13 +133,13 @@ public class CombatManager : MonoBehaviour
 	}
 	public void SpawnProjectileRight()
 	{
-		animatorController.SetAttacking ();
+		animatorController.SetMainAttacking ();
 		Instantiate (projectileRight, projSpawn.position,transform.rotation);
 		nextAttack = (Time.time + stats.attackSpeed);
 	}
 	public void SpawnProjectileLeft()
 	{
-		animatorController.SetAttacking ();
+		animatorController.SetMainAttacking ();
 		Instantiate (projectileLeft, projSpawn.position,transform.rotation);
 		nextAttack = (Time.time + stats.attackSpeed);
 	}
