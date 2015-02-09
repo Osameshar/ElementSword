@@ -32,7 +32,7 @@ class FrostShieldBuff : BuffDebuff
 
 	public void onApply (Stats stats)
 	{
-		stats.shield = shieldAmount;
+		stats.alterShield(shieldAmount);
 		personalAnim.FrostShieldAnimation (true);
 	}
 
@@ -43,7 +43,7 @@ class FrostShieldBuff : BuffDebuff
 
 	public void onEnd (Stats stats)
 	{
-		stats.shield = 0;
+		stats.alterShield(0);
 		personalAnim.FrostShieldAnimation (false);
 	}
 }

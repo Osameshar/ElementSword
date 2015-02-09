@@ -20,13 +20,13 @@ public class PlayerShieldBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		shieldSlider.value = stats.shield;
-		if(stats.shield > 0 && isInactive)
+		shieldSlider.value = stats.getShield();
+		if(stats.getShield() > 0 && isInactive)
 		{
 			isInactive = false;
 			playerFrame.SetActive(true);
 		}
-		if (stats.shield == 0)
+		if (stats.getShield() == 0)
 		{
 			isInactive = true;
 			playerFrame.SetActive(false);

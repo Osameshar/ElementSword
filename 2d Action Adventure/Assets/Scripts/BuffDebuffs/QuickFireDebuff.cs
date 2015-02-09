@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class QuickFireDebuff : BuffDebuff
@@ -25,7 +25,7 @@ public class QuickFireDebuff : BuffDebuff
 	}
 	public void onApply (Stats stats)
 	{
-		stats.toughness -= debuffStrength;
+		stats.alterToughness(-debuffStrength);
 	}
 	
 	public void onSecond (Stats stats)
@@ -36,6 +36,6 @@ public class QuickFireDebuff : BuffDebuff
 	public void onEnd(Stats stats)
 	{
 		//remainingDuration = baseDuration;
-		stats.toughness += debuffStrength;
+		stats.alterToughness(debuffStrength);
 	}
 }

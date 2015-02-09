@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class QuickFrostDebuff : BuffDebuff 
@@ -26,7 +26,7 @@ public class QuickFrostDebuff : BuffDebuff
 
 	public void onApply (Stats stats)
 	{
-		stats.movementModifier -= debuffStrength;
+		stats.alterMovementModifier(-debuffStrength);
 	}
 	
 	public void onSecond (Stats stats)
@@ -36,6 +36,6 @@ public class QuickFrostDebuff : BuffDebuff
 	
 	public void onEnd(Stats stats)
 	{
-		stats.movementModifier += debuffStrength;
+		stats.alterMovementModifier(debuffStrength);
 	}
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class QuickWindBuff : BuffDebuff 
@@ -26,7 +26,7 @@ public class QuickWindBuff : BuffDebuff
 
 	public void onApply (Stats stats)
 	{
-		stats.movementModifier += buffStrength;
+		stats.alterMovementModifier(buffStrength);
 	}
 	
 	public void onSecond (Stats stats)
@@ -34,10 +34,9 @@ public class QuickWindBuff : BuffDebuff
 		
 		remainingDuration--;
 
-	}
-	
+	}	
 	public void onEnd(Stats stats)
 	{
-		stats.movementModifier -= buffStrength;
+		stats.alterMovementModifier(-buffStrength);
 	}
 }

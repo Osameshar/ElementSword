@@ -16,6 +16,6 @@ public class PlayerHealthBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		playerSlider.value = stats.health;
+		playerSlider.value = stats.getHealth();
 	}
 }

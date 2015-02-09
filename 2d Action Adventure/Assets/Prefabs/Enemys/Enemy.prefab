@@ -257,13 +257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f5e5bd761a6d146a06df35ce84089b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1000
-  attackSpeed: 1
+  baseHealth: 100
   baseSpeed: 10
-  damage: 10
-  health: 100
-  toughness: 1
-  movementModifier: 1
+  baseAttackSpeed: 1
+  baseDamage: 10
+  jumpForce: 1000
 --- !u!114 &11440470
 MonoBehaviour:
   m_ObjectHideFlags: 1

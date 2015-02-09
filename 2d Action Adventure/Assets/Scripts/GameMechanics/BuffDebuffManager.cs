@@ -6,6 +6,7 @@ public class BuffDebuffManager : MonoBehaviour
 	private int[] elementStacks;
 	private ArrayList currentBuffDebuffs;
 	private ArrayList toRemoveBuffDebuffs;
+	private const int MAX_STACKS = 5;
 	public Stats stats;
 
 	void Start () 
@@ -15,7 +16,6 @@ public class BuffDebuffManager : MonoBehaviour
 		currentBuffDebuffs = new ArrayList ();
 		toRemoveBuffDebuffs = new ArrayList ();
 		InvokeRepeating ("EachSecond", 0f, 1.0f);
-
 	}
 
 	void Update()
@@ -87,34 +87,51 @@ public class BuffDebuffManager : MonoBehaviour
 
 	public void AddBuffDebuff(BuffDebuff bd)
 	{
-		currentBuffDebuffs.Add (bd);
+
 		switch(bd.GetName())
 		{
 			case "QuickFireDebuff":
 			{
-				elementStacks[0]++;
-				bd.onApply(stats);
+				if(elementStacks[0] < MAX_STACKS)
+				{
+					currentBuffDebuffs.Add (bd);
+					elementStacks[0]++;
+					bd.onApply(stats);
+				}
 				break;
 			}
 			case "QuickFrostDebuff":
 			{
-				elementStacks[1]++;
-				bd.onApply(stats);
+				if(elementStacks[1] < MAX_STACKS)
+					{
+						currentBuffDebuffs.Add (bd);
+						elementStacks[1]++;
+						bd.onApply(stats);					
+					}
 				break;
 			}
 			case "QuickPoisonDebuff":
 			{
-				elementStacks[2]++;
-				bd.onApply(stats);
+				if(elementStacks[2] < MAX_STACKS)
+					{
+						currentBuffDebuffs.Add (bd);
+						elementStacks[2]++;
+						bd.onApply(stats);						
+					}
 				break;
 			}
 			case "QuickWindBuff":
 			{
-				elementStacks[3]++;
-				bd.onApply(stats);
+				if(elementStacks[3] < MAX_STACKS)
+				{
+					currentBuffDebuffs.Add (bd);
+					elementStacks[3]++;
+					bd.onApply(stats);
+				}
 				break;	
 			}
 			default:
+				currentBuffDebuffs.Add (bd);
 				bd.onApply(stats);
 				break;
 

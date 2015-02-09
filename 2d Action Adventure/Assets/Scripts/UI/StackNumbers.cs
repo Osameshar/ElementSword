@@ -55,27 +55,27 @@ public class StackNumbers : MonoBehaviour {
 		case 1:
 			elementStacks.SetActive(true);
 			elementFrame.SetActive(true);
-			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("numberone");
+			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("number1");
 			break;
 		case 2:
 			elementStacks.SetActive(true);
 			elementFrame.SetActive(true);
-			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("numbertwo");
+			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("number2");
 			break;
 		case 3:
 			elementStacks.SetActive(true);
 			elementFrame.SetActive(true);
-			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("numberthree");
+			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("number3");
 			break;
 		case 4:
 			elementStacks.SetActive(true);
 			elementFrame.SetActive(true);
-			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("numberfour");
+			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("number4");
 			break;
 		case 5:
 			elementStacks.SetActive(true);
 			elementFrame.SetActive(true);
-			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("numberfive");
+			elementStacks.GetComponent<Image>().sprite = Resources.Load<Sprite>("number5");
 			break;
 		}
 	}	

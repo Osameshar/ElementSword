@@ -20,7 +20,7 @@ public class EnemyHealthBar : MonoBehaviour {
 	void Update () {
 		if(activeFrame)
 		{
-			enemySlider.value = stats.health;
+			enemySlider.value = stats.getHealth();
 		}
 	}
 

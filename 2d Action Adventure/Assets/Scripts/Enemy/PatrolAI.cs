@@ -21,7 +21,7 @@ public class PatrolAI : MonoBehaviour
 	void Update()
 	{    
 		float distFromStart = transform.position.x - originalPosition.x;   
-		speed = stats.baseSpeed * stats.movementModifier;
+		speed = stats.getSpeed() * stats.getMovementModifier();
 		if (isGoingLeft)
 		{
 			// If gone too far, switch direction

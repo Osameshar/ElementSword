@@ -85,7 +85,7 @@ public class CombatManager : MonoBehaviour
 		yield return new WaitForFixedUpdate ();
 		hitBox.collider2D.enabled = false;
 		//hitBox.GetComponent<SpriteRenderer>().enabled = false;
-		nextAttack = (Time.time + stats.attackSpeed);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 		
 	}
 
@@ -135,13 +135,13 @@ public class CombatManager : MonoBehaviour
 	{
 		animatorController.SetMainAttacking ();
 		Instantiate (projectileRight, projSpawn.position,transform.rotation);
-		nextAttack = (Time.time + stats.attackSpeed);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 	}
 	public void SpawnProjectileLeft()
 	{
 		animatorController.SetMainAttacking ();
 		Instantiate (projectileLeft, projSpawn.position,transform.rotation);
-		nextAttack = (Time.time + stats.attackSpeed);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 	}
 	public bool CanAttack()
 	{
@@ -157,16 +157,16 @@ public class CombatManager : MonoBehaviour
 	{
 		if (invulnerable)
 			return;
-		damage = damage/stats.toughness;
-		if(stats.shield < damage)
+		damage = damage/stats.getToughness();
+		if(stats.getShield() < damage)
 		{
-			damage = damage - stats.shield;
-			stats.health -= damage;
-			stats.shield = 0f;
+			damage = damage - stats.getShield();
+			stats.alterHealth(damage);
+			stats.alterShield(stats.getShield());
 		}
 		else
 		{
-			stats.shield -= damage;
+			stats.alterShield(damage);
 		}
 
 		if(bd != null)

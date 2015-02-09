@@ -18,12 +18,12 @@ public class CombatManagerEnemy : MonoBehaviour
 	}
 	public float GetDamage()
 	{
-		return stats.damage;
+		return stats.getDamage();
 	}
 	public void TakeDamage(float damage, BuffDebuff bd)
 	{
-		damage = damage/stats.toughness;
-		stats.health -= damage;//multiply by toughness or whatever formula we need to use
+		damage = damage/stats.getToughness();
+		stats.alterHealth(damage);//multiply by toughness or whatever formula we need to use
 		if(bd != null)
 			bdManager.AddBuffDebuff (bd);
 	}
