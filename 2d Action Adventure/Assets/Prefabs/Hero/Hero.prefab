@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 100
-  baseSpeed: 10
+  baseSpeed: 13
   baseAttackSpeed: 1
   baseDamage: 10
   jumpForce: 1000

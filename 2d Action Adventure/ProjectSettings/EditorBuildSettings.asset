@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/levelselect.unity
   - enabled: 1
     path: Assets/_Scenes/prototypeScene.unity
+  - enabled: 1
+    path: Assets/_Scenes/levelone.unity

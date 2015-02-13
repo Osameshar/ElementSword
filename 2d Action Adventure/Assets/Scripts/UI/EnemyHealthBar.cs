@@ -36,6 +36,7 @@ public class EnemyHealthBar : MonoBehaviour {
 		{
 			stats = go.GetComponent<Stats> ();
 			enemySlider = enemyFrame.GetComponentInChildren<Slider>();
+			enemySlider.maxValue = stats.baseHealth;
 		}
 
 	}
