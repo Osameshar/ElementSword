@@ -74,4 +74,8 @@ public class Stats : MonoBehaviour
 	{
 		health -= damage;
 	}
+	public void setHealth(float newHealth)
+	{
+		health = newHealth;
+	}
 }

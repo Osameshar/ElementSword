@@ -79,7 +79,6 @@ public class CombatManager : MonoBehaviour
 		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsBackward();
 
 	}
-
 	IEnumerator HitBoxLifeTime(GameObject hitBox)
 	{
 		yield return new WaitForFixedUpdate ();
