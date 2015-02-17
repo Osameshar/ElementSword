@@ -1,0 +1,2731 @@
+fileFormatVersion: 2
+guid: 32a7bcfaa37710f408a47cc18338b014
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dwarves_0
+    21300002: dwarves_1
+    21300004: dwarves_2
+    21300006: dwarves_3
+    21300008: dwarves_4
+    21300010: dwarves_5
+    21300012: dwarves_6
+    21300014: dwarves_7
+    21300016: dwarves_8
+    21300018: dwarves_9
+    21300020: dwarves_10
+    21300022: dwarves_11
+    21300024: dwarves_12
+    21300026: dwarves_13
+    21300028: dwarves_14
+    21300030: dwarves_15
+    21300032: dwarves_16
+    21300034: dwarves_17
+    21300036: dwarves_18
+    21300038: dwarves_19
+    21300040: dwarves_20
+    21300042: dwarves_21
+    21300044: dwarves_22
+    21300046: dwarves_23
+    21300048: dwarves_24
+    21300050: dwarves_25
+    21300052: dwarves_26
+    21300054: dwarves_27
+    21300056: dwarves_28
+    21300058: dwarves_29
+    21300060: dwarves_30
+    21300062: dwarves_31
+    21300064: dwarves_32
+    21300066: dwarves_33
+    21300068: dwarves_34
+    21300070: dwarves_35
+    21300072: dwarves_36
+    21300074: dwarves_37
+    21300076: dwarves_38
+    21300078: dwarves_39
+    21300080: dwarves_40
+    21300082: dwarves_41
+    21300084: dwarves_42
+    21300086: dwarves_43
+    21300088: dwarves_44
+    21300090: dwarves_45
+    21300092: dwarves_46
+    21300094: dwarves_47
+    21300096: dwarves_48
+    21300098: dwarves_49
+    21300100: dwarves_50
+    21300102: dwarves_51
+    21300104: dwarves_52
+    21300106: dwarves_53
+    21300108: dwarves_54
+    21300110: dwarves_55
+    21300112: dwarves_56
+    21300114: dwarves_57
+    21300116: dwarves_58
+    21300118: dwarves_59
+    21300120: dwarves_60
+    21300122: dwarves_61
+    21300124: dwarves_62
+    21300126: dwarves_63
+    21300128: dwarves_64
+    21300130: dwarves_65
+    21300132: dwarves_66
+    21300134: dwarves_67
+    21300136: dwarves_68
+    21300138: dwarves_69
+    21300140: dwarves_70
+    21300142: dwarves_71
+    21300144: dwarves_72
+    21300146: dwarves_73
+    21300148: dwarves_74
+    21300150: dwarves_75
+    21300152: dwarves_76
+    21300154: dwarves_77
+    21300156: dwarves_78
+    21300158: dwarves_79
+    21300160: dwarves_80
+    21300162: dwarves_81
+    21300164: dwarves_82
+    21300166: dwarves_83
+    21300168: dwarves_84
+    21300170: dwarves_85
+    21300172: dwarves_86
+    21300174: dwarves_87
+    21300176: dwarves_88
+    21300178: dwarves_89
+    21300180: dwarves_90
+    21300182: dwarves_91
+    21300184: dwarves_92
+    21300186: dwarves_93
+    21300188: dwarves_94
+    21300190: dwarves_95
+    21300192: dwarves_96
+    21300194: dwarves_97
+    21300196: dwarves_98
+    21300198: dwarves_99
+    21300200: dwarves_100
+    21300202: dwarves_101
+    21300204: dwarves_102
+    21300206: dwarves_103
+    21300208: dwarves_104
+    21300210: dwarves_105
+    21300212: dwarves_106
+    21300214: dwarves_107
+    21300216: dwarves_108
+    21300218: dwarves_109
+    21300220: dwarves_110
+    21300222: dwarves_111
+    21300224: dwarves_112
+    21300226: dwarves_113
+    21300228: dwarves_114
+    21300230: dwarves_115
+    21300232: dwarves_116
+    21300234: dwarves_117
+    21300236: dwarves_118
+    21300238: dwarves_119
+    21300240: dwarves_120
+    21300242: dwarves_121
+    21300244: dwarves_122
+    21300246: dwarves_123
+    21300248: dwarves_124
+    21300250: dwarves_125
+    21300252: dwarves_126
+    21300254: dwarves_127
+    21300256: dwarves_128
+    21300258: dwarves_129
+    21300260: dwarves_130
+    21300262: dwarves_131
+    21300264: dwarves_132
+    21300266: dwarves_133
+    21300268: dwarves_134
+    21300270: dwarves_135
+    21300272: dwarves_136
+    21300274: dwarves_137
+    21300276: dwarves_138
+    21300278: dwarves_139
+    21300280: dwarves_140
+    21300282: dwarves_141
+    21300284: dwarves_142
+    21300286: dwarves_143
+    21300288: dwarves_144
+    21300290: dwarves_145
+    21300292: dwarves_146
+    21300294: dwarves_147
+    21300296: dwarves_148
+    21300298: dwarves_149
+    21300300: dwarves_150
+    21300302: dwarves_151
+    21300304: dwarves_152
+    21300306: dwarves_153
+    21300308: dwarves_154
+    21300310: dwarves_155
+    21300312: dwarves_156
+    21300314: dwarves_157
+    21300316: dwarves_158
+    21300318: dwarves_159
+    21300320: dwarves_160
+    21300322: dwarves_161
+    21300324: dwarves_162
+    21300326: dwarves_163
+    21300328: dwarves_164
+    21300330: dwarves_165
+    21300332: dwarves_166
+    21300334: dwarves_167
+    21300336: dwarves_168
+    21300338: dwarves_169
+    21300340: dwarves_170
+    21300342: dwarves_171
+    21300344: dwarves_172
+    21300346: dwarves_173
+    21300348: dwarves_174
+    21300350: dwarves_175
+    21300352: dwarves_176
+    21300354: dwarves_177
+    21300356: dwarves_178
+    21300358: dwarves_179
+    21300360: dwarves_180
+    21300362: dwarves_181
+    21300364: dwarves_182
+    21300366: dwarves_183
+    21300368: dwarves_184
+    21300370: dwarves_185
+    21300372: dwarves_186
+    21300374: dwarves_187
+    21300376: dwarves_188
+    21300378: dwarves_189
+    21300380: dwarves_190
+    21300382: dwarves_191
+    21300384: dwarves_192
+    21300386: dwarves_193
+    21300388: dwarves_194
+    21300390: dwarves_195
+    21300392: dwarves_196
+    21300394: dwarves_197
+    21300396: dwarves_198
+    21300398: dwarves_199
+    21300400: dwarves_200
+    21300402: dwarves_201
+    21300404: dwarves_202
+    21300406: dwarves_203
+    21300408: dwarves_204
+    21300410: dwarves_205
+    21300412: dwarves_206
+    21300414: dwarves_207
+    21300416: dwarves_208
+    21300418: dwarves_209
+    21300420: dwarves_210
+    21300422: dwarves_211
+    21300424: dwarves_212
+    21300426: dwarves_213
+    21300428: dwarves_214
+    21300430: dwarves_215
+    21300432: dwarves_216
+    21300434: dwarves_217
+    21300436: dwarves_218
+    21300438: dwarves_219
+    21300440: dwarves_220
+    21300442: dwarves_221
+    21300444: dwarves_222
+    21300446: dwarves_223
+    21300448: dwarves_224
+    21300450: dwarves_225
+    21300452: dwarves_226
+    21300454: dwarves_227
+    21300456: dwarves_228
+    21300458: dwarves_229
+    21300460: dwarves_230
+    21300462: dwarves_231
+    21300464: dwarves_232
+    21300466: dwarves_233
+    21300468: dwarves_234
+    21300470: dwarves_235
+    21300472: dwarves_236
+    21300474: dwarves_237
+    21300476: dwarves_238
+    21300478: dwarves_239
+    21300480: dwarves_240
+    21300482: dwarves_241
+    21300484: dwarves_242
+    21300486: dwarves_243
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: dwarves_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 879
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 879
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_2
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 879
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_3
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 879
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_4
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 879
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_5
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 879
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_6
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 879
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_7
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 879
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_8
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 879
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_9
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 879
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_10
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 879
+        width: 80
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_11
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 879
+        width: 74
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_12
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 879
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_13
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 879
+        width: 72
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_14
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 879
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_15
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 879
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_16
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 879
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_17
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 879
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_18
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 879
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_19
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 879
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 799
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 799
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_22
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 799
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_23
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 799
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_24
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 799
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_25
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 799
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_26
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 799
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_27
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 799
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_28
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 799
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_29
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 799
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_30
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 799
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_31
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 799
+        width: 78
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_32
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 828
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_33
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 799
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_34
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 799
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_35
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 799
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_36
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 799
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_37
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 799
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_38
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 799
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_39
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 799
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_40
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 799
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_41
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 719
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 719
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_43
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 719
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_44
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 719
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_45
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 719
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_46
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 719
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_47
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 719
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_48
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 719
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_49
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 719
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_50
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 719
+        width: 54
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_51
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 719
+        width: 76
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_52
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 719
+        width: 65
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_53
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 719
+        width: 92
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_54
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 719
+        width: 84
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_55
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 719
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_56
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 719
+        width: 61
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_57
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 719
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_58
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 719
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_59
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 719
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_60
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 719
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_61
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 639
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_62
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 639
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_63
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 639
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_64
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 639
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_65
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 639
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_66
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 639
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_67
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 639
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_68
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 639
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_69
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 639
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_70
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 639
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_71
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 639
+        width: 80
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_72
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 639
+        width: 74
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_73
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 639
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_74
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 639
+        width: 72
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_75
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 639
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_76
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 639
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_77
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 639
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_78
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 639
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_79
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 639
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_80
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 639
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_81
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 559
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_82
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 559
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_83
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 559
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_84
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 559
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_85
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 559
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_86
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 559
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_87
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 559
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_88
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 559
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_89
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 559
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_90
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 559
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_91
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 559
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_92
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 559
+        width: 78
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_93
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 588
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_94
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 559
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_95
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 559
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_96
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 559
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_97
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 559
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_98
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 559
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_99
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 559
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_100
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 559
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_101
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 559
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_102
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 479
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_103
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 479
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_104
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 479
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_105
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 479
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_106
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 479
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_107
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 479
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_108
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 479
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_109
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 479
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_110
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 479
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_111
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 479
+        width: 54
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_112
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 479
+        width: 76
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_113
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 479
+        width: 65
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_114
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 479
+        width: 92
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_115
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 479
+        width: 84
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_116
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 479
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_117
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 479
+        width: 61
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_118
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 479
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_119
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 479
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_120
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 479
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_121
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 479
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_122
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 399
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_123
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 399
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_124
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 399
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_125
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 399
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_126
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 399
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_127
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 399
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_128
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 399
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_129
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 399
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_130
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 399
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_131
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 399
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_132
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 399
+        width: 80
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_133
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 399
+        width: 74
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_134
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 399
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_135
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 399
+        width: 72
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_136
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 399
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_137
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 399
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_138
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 399
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_139
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 399
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_140
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 399
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_141
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 399
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_142
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 319
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_143
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 319
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_144
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 319
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_145
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 319
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_146
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 319
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_147
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 319
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_148
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 319
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_149
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 319
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_150
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 319
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_151
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 319
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_152
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 319
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_153
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 319
+        width: 78
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_154
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 348
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_155
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 319
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_156
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 319
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_157
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 319
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_158
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 319
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_159
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 319
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_160
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 319
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_161
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 319
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_162
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 319
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_163
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 239
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_164
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 239
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_165
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 239
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_166
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 239
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_167
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 239
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_168
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 239
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_169
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 239
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_170
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 239
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_171
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 239
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_172
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 239
+        width: 54
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_173
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 239
+        width: 76
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_174
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 239
+        width: 65
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_175
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 239
+        width: 92
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_176
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 239
+        width: 84
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_177
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 239
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_178
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 239
+        width: 61
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_179
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 239
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_180
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 239
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_181
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 239
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_182
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 239
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_183
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 159
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_184
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 159
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_185
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 159
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_186
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 159
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_187
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 159
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_188
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 159
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_189
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 159
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_190
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 159
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_191
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 159
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_192
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 159
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_193
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 159
+        width: 80
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_194
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 159
+        width: 74
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_195
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 159
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_196
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 159
+        width: 72
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_197
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 159
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_198
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 159
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_199
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 159
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_200
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 159
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_201
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 159
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_202
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 159
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_203
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 79
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_204
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 79
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_205
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 79
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_206
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 79
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_207
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 79
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_208
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 79
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_209
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 79
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_210
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 79
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_211
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 79
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_212
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 79
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_213
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 79
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_214
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 79
+        width: 78
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_215
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 108
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_216
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 79
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_217
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 79
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_218
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 79
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_219
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 79
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_220
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 79
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_221
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 79
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_222
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 79
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_223
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 79
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_224
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 49
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_225
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 49
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_226
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_227
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_228
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 0
+        width: 62
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_229
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 0
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_230
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 43
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_231
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 0
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_232
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 0
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_233
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 0
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_234
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 0
+        width: 76
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_235
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 0
+        width: 65
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_236
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 92
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_237
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 0
+        width: 84
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_238
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 0
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_239
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 0
+        width: 61
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_240
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 0
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_241
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 0
+        width: 50
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_242
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 0
+        width: 51
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dwarves_243
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 0
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
