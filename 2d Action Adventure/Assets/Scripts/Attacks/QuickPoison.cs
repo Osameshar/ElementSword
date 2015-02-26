@@ -29,7 +29,7 @@ public class QuickPoison : Attack,DefaultAttack
 	}
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
-		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickPoisonDebuff());
+		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickPoisonDebuff(),true);
 	}
 	
 	public string GetNextAttack()

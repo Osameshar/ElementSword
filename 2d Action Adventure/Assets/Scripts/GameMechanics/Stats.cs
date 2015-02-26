@@ -17,7 +17,7 @@ public class Stats : MonoBehaviour
 	private float shield = 0f;
 	private float toughness = 1f;
 	private float movementModifier = 1f;
-
+	private int stunned = 0;
 	void Start()
 	{
 		attackSpeed = baseAttackSpeed;
@@ -58,6 +58,12 @@ public class Stats : MonoBehaviour
 	{
 		return movementModifier;
 	}
+	public int getStunned()
+	{
+		return stunned;
+	}
+
+
 	public void alterMovementModifier (float modifier)
 	{
 		movementModifier += modifier;
@@ -78,4 +84,9 @@ public class Stats : MonoBehaviour
 	{
 		health = newHealth;
 	}
+	public void alterStunned(int duration)
+	{
+		stunned += duration;
+	}
+
 }

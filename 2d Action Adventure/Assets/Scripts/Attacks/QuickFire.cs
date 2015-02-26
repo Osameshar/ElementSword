@@ -28,7 +28,7 @@ public class QuickFire : Attack,DefaultAttack
 	}
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
-		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickFireDebuff());
+		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickFireDebuff(),true);
 	}
 
 	public string GetNextAttack()

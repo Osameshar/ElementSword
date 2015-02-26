@@ -19,6 +19,6 @@ public class ProjectileFire : Attack
 	}
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
-		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickFireDebuff());
+		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickFireDebuff(),true);
 	}
 }

@@ -24,33 +24,42 @@ public class EnemyController : MonoBehaviour
 	
 	void Update () 
 	{
-		speed = stats.getSpeed() * stats.getMovementModifier();
-		anim.SetFloat ("Speed", speed);
-		
-		switch (action) 
-		{
-		case 1:
-		{
-			isPatrolling();
-			break;
-		}
-		case 2:
-		{
-			isChasing();
-			break;
-		}
-		case 3:
-		{
-			isReturning();
-			break;
-		}
-		default:
-		{
-			break;
-		}
-		}
+		if (stats.getStunned () == 0) {
+					
+						speed = stats.getSpeed () * stats.getMovementModifier ();
+						anim.SetFloat ("Speed", speed);
+
+						switch (action) {
+						case 1:
+								{
+										isPatrolling ();
+										break;
+								}
+						case 2:
+								{
+										isChasing ();
+										break;
+								}
+						case 3:
+								{
+										isReturning ();
+										break;
+								}
+						default:
+								{
+										break;
+								}
+						}
+				} else 
+				{
+					isStunned();
+				}
 	}
-	
+
+	void isStunned()
+	{
+
+	}
 	void isPatrolling()
 	{
 		float distFromStart = transform.position.x - originalPosition.x;   

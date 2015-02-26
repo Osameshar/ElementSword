@@ -14,6 +14,9 @@ public class AttackLibrary : MonoBehaviour
 		allAttacks.Add ("QuickWind", new QuickWind ());
 		allAttacks.Add ("StrongAttack", new StrongAttack ());
 		allAttacks.Add ("FrostShield", new FrostShield ());
+		allAttacks.Add ("Toxic", new Toxic ());
+		allAttacks.Add ("IgniteTheBlight", new IgniteTheBlight ());
+		allAttacks.Add ("BlackIce", new BlackIce ());
 	}
 
 	public Attack GetAttackByName(string name)

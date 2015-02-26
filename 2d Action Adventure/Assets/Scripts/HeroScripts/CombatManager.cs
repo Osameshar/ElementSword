@@ -152,7 +152,7 @@ public class CombatManager : MonoBehaviour
 			return false;
 	}
 
-	public void TakeDamage(float damage, BuffDebuff bd)
+	public void TakeDamage(float damage, BuffDebuff bd, bool activatesInvuln)
 	{
 		if (invulnerable)
 			return;
@@ -170,8 +170,11 @@ public class CombatManager : MonoBehaviour
 
 		if(bd != null)
 			bdManager.AddBuffDebuff (bd);
-		invulnerable = true;
-		StartCoroutine (InvulnerableTime ());
+		if(activatesInvuln)
+		{
+			invulnerable = true;
+			StartCoroutine (InvulnerableTime ());
+		}
 	}
 	IEnumerator InvulnerableTime()
 	{

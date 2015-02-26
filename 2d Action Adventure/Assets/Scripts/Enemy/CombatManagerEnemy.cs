@@ -12,7 +12,6 @@ public class CombatManagerEnemy : MonoBehaviour
 	{
 		stats = GetComponent<Stats> ();
 		bdManager = GetComponent<BuffDebuffManager> ();
-
 	}
 
 	void Update () {
@@ -22,7 +21,7 @@ public class CombatManagerEnemy : MonoBehaviour
 	{
 		return stats.getDamage();
 	}
-	public void TakeDamage(float damage, BuffDebuff bd)
+	public void TakeDamage(float damage, BuffDebuff bd, bool activatesInvuln)
 	{
 		if (invulnerable)
 			return;
@@ -30,9 +29,11 @@ public class CombatManagerEnemy : MonoBehaviour
 		stats.alterHealth(damage);//multiply by toughness or whatever formula we need to use
 		if(bd != null)
 			bdManager.AddBuffDebuff (bd);
-	
-		invulnerable = true;
-		StartCoroutine (InvulnerableTime ());
+		if(activatesInvuln)
+		{
+			invulnerable = true;
+			StartCoroutine (InvulnerableTime ());
+		}
 	}
 
 	IEnumerator InvulnerableTime()

@@ -19,6 +19,6 @@ public class ProjectileFrost : Attack
 	}
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
-		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickFrostDebuff());
+		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, new QuickFrostDebuff(),true);
 	}
 }

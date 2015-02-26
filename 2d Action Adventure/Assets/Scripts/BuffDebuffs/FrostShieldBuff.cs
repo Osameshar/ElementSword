@@ -43,7 +43,7 @@ class FrostShieldBuff : BuffDebuff
 
 	public void onEnd (Stats stats)
 	{
-		stats.alterShield(0);
+		stats.alterShield(stats.getShield());
 		personalAnim.FrostShieldAnimation (false);
 	}
 }

@@ -28,7 +28,7 @@ public class QuickWind : Attack,DefaultAttack
 	}
 	public void ExecuteAttack(GameObject enemy, GameObject player)
 	{
-		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, null);
+		enemy.GetComponent<CombatManagerEnemy> ().TakeDamage (damage, null,true);
 		player.GetComponent<BuffDebuffManager> ().AddBuffDebuff (new QuickWindBuff());
 	}
 	

@@ -48,14 +48,14 @@ public class HeroController : MonoBehaviour
 	public void BlinkRight ()
 	{
 
-		transform.position = new Vector3 (transform.position.x + 5, transform.position.y, 0);
+		//transform.position = new Vector3 (transform.position.x + 5, transform.position.y, 0);
 
 	}
 
 	public void BlinkLeft ()
 	{
 		//transform.Translate (new Vector3 (transform.position.x - 1, transform.position.y -1, 0));
-		transform.position = new Vector3 (transform.position.x - 5, transform.position.y, 0);
+		//transform.position = new Vector3 (transform.position.x - 5, transform.position.y, 0);
 
 	}
 	

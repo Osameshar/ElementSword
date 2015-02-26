@@ -18,7 +18,7 @@ public class OnCollisionEnemy : MonoBehaviour
 		{
 			//Vector2 dir = (collision.transform.position - transform.position).normalized; 
 			//player.rigidbody2D.AddForce(dir*1000);
-			player.GetComponent<CombatManager>().TakeDamage(combatManager.GetDamage(),null);
+			player.GetComponent<CombatManager>().TakeDamage(combatManager.GetDamage(),null,true);
 		}
 	}
 }

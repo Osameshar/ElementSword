@@ -31,7 +31,7 @@ public class QuickPoisonDebuff : BuffDebuff
 	
 	public void onSecond (Stats stats)
 	{
-		stats.gameObject.GetComponent<CombatManagerEnemy>().TakeDamage(debuffStrength,null);
+		stats.gameObject.GetComponent<CombatManagerEnemy>().TakeDamage(debuffStrength,null,false);
 		remainingDuration--;		
 	}
 	

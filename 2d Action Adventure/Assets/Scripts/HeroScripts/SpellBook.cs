@@ -13,6 +13,9 @@ public class SpellBook
 		attackLibrary = libs.GetComponent<AttackLibrary>();
 
 		EquipSpell("FrostShield");
+		EquipSpell("Toxic");
+		EquipSpell("IgniteTheBlight");
+		EquipSpell("BlackIce");
 	}
 
 	public void EquipSpell(string spellName)
@@ -40,9 +43,9 @@ public class SpellBook
 
 		if (numStacks [0] > 0)
 			combocode += 100;
-		else if (numStacks [1] > 0)
+		if (numStacks [1] > 0)
 			combocode += 10;
-		else if (numStacks [2] > 0)
+		if (numStacks [2] > 0)
 			combocode += 1;
 
 		return combocode;
