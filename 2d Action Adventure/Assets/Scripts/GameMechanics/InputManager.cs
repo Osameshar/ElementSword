@@ -97,7 +97,10 @@ public class InputManager : MonoBehaviour
 				}
 				else
 				{
-					combat.SpawnFrontHitBox ();
+					if(controller.facingRight)
+						combat.SpawnForwardRight ();
+					else
+						combat.SpawnForwardLeft();
 				}
 				
 			}
@@ -113,7 +116,10 @@ public class InputManager : MonoBehaviour
 				}
 				else
 				{
-					combat.SpawnStrongFrontHitBox();
+					if(controller.facingRight)
+						combat.SpawnStrongForwardRight();
+					else 
+						combat.SpawnStrongForwardLeft();
 				}
 				
 			}
