@@ -8,12 +8,16 @@ public class CombatManager : MonoBehaviour
 	private Stats stats;
 	private float nextAttack = 0.0f;
 
-	public GameObject forwardATK;
-	public GameObject bottomATK;
-	public GameObject topATK;
-	public GameObject strongForwardATK;
-	public GameObject strongBottomATK;
-	public GameObject strongTopATK;
+	public Transform forwardATKLoc;
+	public Transform topATKLoc;
+	public Transform botATKLoc;
+
+	public GameObject quickAttackRight;
+	public GameObject quickAttackLeft;
+	public GameObject strongAttackRight;
+	public GameObject strongAttackLeft;
+
+
 
 	public Transform projSpawn;
 	public GameObject projectileRight;
@@ -44,12 +48,6 @@ public class CombatManager : MonoBehaviour
 		currentAttack = attackLibrary.GetAttackByName ("QuickFire");
 		strongAttack = attackLibrary.GetAttackByName ("StrongAttack");
 
-		forwardATK.collider2D.enabled = false;
-		bottomATK.collider2D.enabled = false;
-		topATK.collider2D.enabled = false;
-		strongForwardATK.collider2D.enabled = false;
-		strongBottomATK.collider2D.enabled = false;
-		strongTopATK.collider2D.enabled = false;
 	}
 
 	public SpellBook GetEquippedSpells ()
@@ -68,67 +66,68 @@ public class CombatManager : MonoBehaviour
 	public void CycleElementForward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetNextAttack());
-		animatorController.UpdateActiveElementVariables (currentAttack);
 		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsForward();
 	}
 	
 	public void CycleElementBackward ()
 	{
 		currentAttack = attackLibrary.GetAttackByName(((DefaultAttack)currentAttack).GetPreviousAttack());
-		animatorController.UpdateActiveElementVariables (currentAttack);
 		GameObject.FindGameObjectWithTag ("GUIManager").GetComponent<ElementIcons> ().cycleIconsBackward();
 
 	}
-	IEnumerator HitBoxLifeTime(GameObject hitBox)
+
+	public void SpawnForwardRight ()
 	{
-		yield return new WaitForFixedUpdate ();
-		hitBox.collider2D.enabled = false;
-		//hitBox.GetComponent<SpriteRenderer>().enabled = false;
+		animatorController.SetMainAttacking ();
+		Instantiate (quickAttackRight, forwardATKLoc.position, transform.rotation);
 		nextAttack = (Time.time + stats.getAttackSpeed());
-		
+	}
+	public void SpawnForwardLeft ()
+	{
+		animatorController.SetMainAttacking ();
+		Instantiate (quickAttackLeft, forwardATKLoc.position, transform.rotation);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 	}
 
-	public void SpawnFrontHitBox ()
+	public void SpawnStrongForwardRight ()
 	{
-		forwardATK.collider2D.enabled = true;
 		animatorController.SetMainAttacking ();
-		animatorController.SetForwardAttacking ();
-		//forwardATK.GetComponent<SpriteRenderer> ().enabled = true;
-		StartCoroutine (HitBoxLifeTime (forwardATK));
+		Instantiate (strongAttackRight, forwardATKLoc.position, transform.rotation);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 	}
-	
+
 	public void SpawnTopHitBox ()
 	{
-		topATK.collider2D.enabled = true;
-		topATK.GetComponent<SpriteRenderer> ().enabled = true;
-		StartCoroutine (HitBoxLifeTime (topATK));
+		animatorController.SetMainAttacking ();
+		Instantiate (quickAttackRight,topATKLoc.position,topATKLoc.rotation);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 	}	
-
+	
 	public void SpawnBottomHitBox ()
 	{
-		bottomATK.collider2D.enabled = true;
-		bottomATK.GetComponent<SpriteRenderer> ().enabled = true;
-		StartCoroutine (HitBoxLifeTime (bottomATK));
+		animatorController.SetMainAttacking ();
+		Instantiate (quickAttackLeft,botATKLoc.position,botATKLoc.rotation);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 	}	
-	public void SpawnStrongFrontHitBox ()
-	{
-		strongForwardATK.collider2D.enabled = true;
-		animatorController.SetStrong ();
-		StartCoroutine (HitBoxLifeTime (strongForwardATK));
-	}
 
+	public void SpawnStrongForwardLeft ()
+	{
+		animatorController.SetMainAttacking ();
+		Instantiate (strongAttackLeft, forwardATKLoc.position, transform.rotation);
+		nextAttack = (Time.time + stats.getAttackSpeed());
+	}
+	
 	public void SpawnStrongTopHitBox ()
 	{
-		strongTopATK.collider2D.enabled = true;
-		strongTopATK.GetComponent<SpriteRenderer> ().enabled = true;
-		StartCoroutine (HitBoxLifeTime (strongTopATK));		
+		animatorController.SetMainAttacking ();
+		Instantiate (strongAttackRight, topATKLoc.position, topATKLoc.rotation);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 	}
-
 	public void SpawnStrongBottomHitBox ()
 	{
-		strongBottomATK.collider2D.enabled = true;
-		strongBottomATK.GetComponent<SpriteRenderer> ().enabled = true;
-		StartCoroutine (HitBoxLifeTime (strongBottomATK));
+		animatorController.SetMainAttacking ();
+		Instantiate (strongAttackLeft, botATKLoc.position, botATKLoc.rotation);
+		nextAttack = (Time.time + stats.getAttackSpeed());
 	}
 	public void SpawnProjectileRight()
 	{
