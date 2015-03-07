@@ -11,7 +11,7 @@ public class HeroController : MonoBehaviour
 	private float groundRadius = 0.2f;
 
 	private bool doubleJump = false;
-	public bool facingRight = true;
+	private bool facingRight = true;
 
 	private Animator anim;
 	private CombatManager combat;
