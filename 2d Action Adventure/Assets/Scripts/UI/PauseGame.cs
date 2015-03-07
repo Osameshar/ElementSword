@@ -9,6 +9,7 @@ public class PauseGame : MonoBehaviour {
 	private bool isEnabled = false;
 	private GameObject spellbookButton;
 	private GameObject quitButton;
+	private GameObject controlsButton;
 	private ArrayList buttonList = new ArrayList();
 	private int counter;
 	private int numButtons;
@@ -19,11 +20,17 @@ public class PauseGame : MonoBehaviour {
 		inputManager = GameObject.Find ("Input Manager");
 		spellbookButton = GameObject.Find ("SpellbookButton");
 		quitButton = GameObject.Find("QuitButton");
+		controlsButton = GameObject.Find ("ControlsButton");
 		buttonList.Add (spellbookButton);
 		buttonList.Add (quitButton);
+		buttonList.Add (controlsButton);
 		counter = 0;
 		numButtons = buttonList.Count - 1;
 		nextInput = Time.time;
+	}
+	public void OnClickControls()
+	{
+
 	}
 	public void OnClickSpellBook()
 	{
