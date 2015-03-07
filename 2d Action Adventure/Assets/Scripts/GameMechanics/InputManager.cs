@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
 	// Use this for initialization
 	private HeroController controller;
 	private CombatManager combat;
+	
+
 	void Start () 
 	{
 		GameObject hc = GameObject.FindGameObjectWithTag ("Player");
@@ -25,7 +27,6 @@ public class InputManager : MonoBehaviour
 			CheckForElementSwitchInput ();
 			CheckJumpInput ();
 			CheckHorizontalInput();
-
 		}
 	}
 
@@ -158,4 +159,5 @@ public class InputManager : MonoBehaviour
 		else
 			return false;
 	}
+
 }
