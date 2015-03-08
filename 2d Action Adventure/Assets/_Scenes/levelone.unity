@@ -30153,7 +30153,7 @@ Animator:
   m_GameObject: {fileID: 1867210334}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96408034976958a4c9a6984af3eefa3f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 75c2c8cbec9dcee489611aa03c2700b3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -30162,7 +30162,7 @@ Animator:
 --- !u!212 &1867210337
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21241108, guid: 24b6184b4ee12c74497d4ecacb3fa357,
+  m_PrefabParentObject: {fileID: 21284492, guid: 24b6184b4ee12c74497d4ecacb3fa357,
     type: 2}
   m_PrefabInternal: {fileID: 1258298453}
   m_GameObject: {fileID: 1867210334}
@@ -32382,7 +32382,7 @@ Animator:
   m_GameObject: {fileID: 2026525469}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96408034976958a4c9a6984af3eefa3f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 75c2c8cbec9dcee489611aa03c2700b3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -32391,7 +32391,7 @@ Animator:
 --- !u!212 &2026525472
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21241108, guid: 24b6184b4ee12c74497d4ecacb3fa357,
+  m_PrefabParentObject: {fileID: 21284492, guid: 24b6184b4ee12c74497d4ecacb3fa357,
     type: 2}
   m_PrefabInternal: {fileID: 539748737}
   m_GameObject: {fileID: 2026525469}
@@ -33337,7 +33337,7 @@ Animator:
   m_GameObject: {fileID: 2116338272}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96408034976958a4c9a6984af3eefa3f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 75c2c8cbec9dcee489611aa03c2700b3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -33346,7 +33346,7 @@ Animator:
 --- !u!212 &2116338275
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21241108, guid: 24b6184b4ee12c74497d4ecacb3fa357,
+  m_PrefabParentObject: {fileID: 21284492, guid: 24b6184b4ee12c74497d4ecacb3fa357,
     type: 2}
   m_PrefabInternal: {fileID: 879705261}
   m_GameObject: {fileID: 2116338272}
