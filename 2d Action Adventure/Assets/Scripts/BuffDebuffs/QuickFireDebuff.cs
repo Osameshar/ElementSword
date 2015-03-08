@@ -6,7 +6,7 @@ public class QuickFireDebuff : BuffDebuff
 	private int remainingDuration;
 	private string name;
 	private float debuffStrength;
-	private string iconLocation = "Enemy";
+	private string iconLocation = "N/A";
 	private string iconName = "Fire";
 	public QuickFireDebuff()
 	{

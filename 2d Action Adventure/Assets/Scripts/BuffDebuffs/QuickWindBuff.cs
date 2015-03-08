@@ -6,7 +6,7 @@ public class QuickWindBuff : BuffDebuff
 	private int remainingDuration;
 	private string name;
 	private float buffStrength;
-	private string iconLocation = "Player";
+	private string iconLocation = "N/A";
 	private string iconName = "Wind";
 
 	public QuickWindBuff()

@@ -15,8 +15,8 @@ public class Stats : MonoBehaviour
 	private float damage;
 	private float health;
 	private float shield = 0f;
-	private float toughness = 1f;
-	private float movementModifier = 1f;
+	public float toughness = 1f;
+	public float movementModifier = 1f;
 	private int stunned = 0;
 	void Start()
 	{

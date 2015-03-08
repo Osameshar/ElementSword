@@ -134,6 +134,7 @@ public class BuffDebuffManager : MonoBehaviour
 				break;	
 			}
 			default:
+				RemoveBuffDeBuff(bd.GetName());
 				currentBuffDebuffs.Add (bd);
 				bd.onApply(stats);
 				addBuffImage(bd);
@@ -152,6 +153,8 @@ public class BuffDebuffManager : MonoBehaviour
 		}
 		foreach (BuffDebuff bd in duplicate) 
 		{
+			bd.onEnd(stats);
+			removeBuffImage(bd);
 			currentBuffDebuffs.Remove (bd);
 		}
 		duplicate.Clear ();

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class AnimatorController : MonoBehaviour 
 {
-	private Animator forwardAnim;
 
 	public GameObject personalAnimGO;
 	private Animator personalAnim;
@@ -21,57 +20,18 @@ public class AnimatorController : MonoBehaviour
 	
 	}
 
-	public void SetForwardAttacking ()
-	{
-		forwardAnim.SetTrigger ("Attacking");
-	}
-
 	public void SetMainAttacking ()
 	{
 		playerAnim.SetTrigger ("Attacking");
 	}
-	
-	public void UpdateActiveElementVariables (Attack currentAttack)
-	{
-		if (currentAttack.GetName ().Equals ("QuickFire")) 
-		{
-			forwardAnim.SetBool("FireEquipped",true);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",false);
 
-		} 
-		else if (currentAttack.GetName ().Equals ("QuickFrost")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",true);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",false);
-
-		}
-		else if (currentAttack.GetName ().Equals ("QuickPoison")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",true);
-			forwardAnim.SetBool("WindEquipped",false);
-
-		}
-		else if (currentAttack.GetName ().Equals ("QuickWind")) 
-		{
-			forwardAnim.SetBool("FireEquipped",false);
-			forwardAnim.SetBool("FrostEquipped",false);
-			forwardAnim.SetBool("PoisonEquipped",false);
-			forwardAnim.SetBool("WindEquipped",true);
-
-		}
-	}
-	public void SetStrong()
-	{
-		forwardAnim.SetTrigger ("Strong");
-	}
 	public void FrostShieldAnimation(bool val)
 	{
 		personalAnim.SetBool ("FrostShield",val);
+	}
+
+	public void ToxicAnimation(bool val)
+	{
+		personalAnim.SetBool ("Toxic",val);
 	}
 }

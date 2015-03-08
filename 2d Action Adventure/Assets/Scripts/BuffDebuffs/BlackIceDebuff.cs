@@ -28,6 +28,8 @@ public class BlackIceDebuff : BuffDebuff {
 	public void onApply (Stats stats)
 	{
 		stats.alterStunned (remainingDuration);
+		stats.gameObject.transform.Find ("PersonalAnim").gameObject.GetComponent<Animator>().SetTrigger("BlackIce");
+		stats.gameObject.transform.Find ("PersonalAnim").gameObject.GetComponent<Animator>().SetBool("BlackIceR",true);
 	}
 	public void onSecond (Stats stats)
 	{
@@ -38,7 +40,7 @@ public class BlackIceDebuff : BuffDebuff {
 	}
 	public void onEnd (Stats stats)
 	{
-
+		stats.gameObject.transform.Find ("PersonalAnim").gameObject.GetComponent<Animator>().SetBool("BlackIceR",false);
 	}
 	public string GetIconLocation ()
 	{

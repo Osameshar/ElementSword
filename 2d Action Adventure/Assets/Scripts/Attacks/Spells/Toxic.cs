@@ -23,10 +23,12 @@ public class Toxic : Spell {
 	}
 	public void ExecuteAttack (GameObject enemy, GameObject player)
 	{
+		enemy.transform.Find ("PersonalAnim").gameObject.GetComponent<Animator>().SetTrigger("Toxic");
 		int stacks = enemy.GetComponent<BuffDebuffManager>().GetElementStacks()[2];
 		BuffDebuffManager bdmanager = enemy.GetComponent<BuffDebuffManager> ();
 		bdmanager.RemoveBuffDeBuff("ToxicDebuff");
 		bdmanager.AddBuffDebuff (new ToxicDebuff (stacks));
+
 	}
 	public string GetName ()
 	{
