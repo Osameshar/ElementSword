@@ -3,7 +3,6 @@ using System.Collections;
 
 public class AnimatorController : MonoBehaviour 
 {
-	public GameObject forwardAnimGO;
 	private Animator forwardAnim;
 
 	public GameObject personalAnimGO;
@@ -15,7 +14,6 @@ public class AnimatorController : MonoBehaviour
 	{
 		playerAnim = GetComponent<Animator> ();
 		personalAnim = personalAnimGO.GetComponent<Animator>();
-		forwardAnim = forwardAnimGO.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
