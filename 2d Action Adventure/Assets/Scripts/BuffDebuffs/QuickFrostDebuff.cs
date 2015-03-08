@@ -6,6 +6,8 @@ public class QuickFrostDebuff : BuffDebuff
 	private int remainingDuration;
 	private string name;
 	private float debuffStrength;
+	private string iconLocation = "Enemy";
+	private string iconName = "Frost";
 
 	public QuickFrostDebuff()
 	{
@@ -37,5 +39,14 @@ public class QuickFrostDebuff : BuffDebuff
 	public void onEnd(Stats stats)
 	{
 		stats.alterMovementModifier(debuffStrength);
+	}
+	public string GetIconLocation ()
+	{
+		return iconLocation;
+	}
+	
+	public string getIconName ()
+	{
+		return iconName;
 	}
 }

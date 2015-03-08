@@ -8,9 +8,11 @@ public class BuffDebuffManager : MonoBehaviour
 	private ArrayList toRemoveBuffDebuffs;
 	private const int MAX_STACKS = 5;
 	public Stats stats;
+	private GameObject guiManager;
 
 	void Start () 
 	{
+		guiManager = GameObject.Find ("Gui Manager");
 		stats = GetComponent<Stats> ();
 		elementStacks = new int[4]{0,0,0,0};//FIRE,FROST,POISON,WIND
 		currentBuffDebuffs = new ArrayList ();
@@ -72,6 +74,7 @@ public class BuffDebuffManager : MonoBehaviour
 				}
 				default:
 					bd.onEnd(stats);
+					removeBuffImage(bd);
 					break;
 					
 				}
@@ -133,6 +136,7 @@ public class BuffDebuffManager : MonoBehaviour
 			default:
 				currentBuffDebuffs.Add (bd);
 				bd.onApply(stats);
+				addBuffImage(bd);
 				break;
 
 		}
@@ -151,5 +155,14 @@ public class BuffDebuffManager : MonoBehaviour
 			currentBuffDebuffs.Remove (bd);
 		}
 		duplicate.Clear ();
+	}
+
+	void addBuffImage (BuffDebuff bd)
+	{
+		guiManager.GetComponent<StackNumbers> ().addBuffDebuff (bd);
+	}
+	void removeBuffImage(BuffDebuff bd)
+	{
+		guiManager.GetComponent<StackNumbers> ().removeBuffDebuff (bd);
 	}
 }

@@ -8,6 +8,8 @@ class FrostShieldBuff : BuffDebuff
 	private int remainingDuration;
 	private string name;
 	private AnimatorController personalAnim;
+	private string iconLocation = "Player";
+	private string iconName = "FrostShield";
 
 	public FrostShieldBuff (int stacks)
 	{
@@ -38,13 +40,28 @@ class FrostShieldBuff : BuffDebuff
 
 	public void onSecond (Stats stats)
 	{
-		remainingDuration--;
+		if(stats.getShield() <= 0)
+		{
+			remainingDuration = 0;
+		}
+		else
+		{
+			remainingDuration--;
+		}
 	}
 
 	public void onEnd (Stats stats)
 	{
 		stats.alterShield(stats.getShield());
 		personalAnim.FrostShieldAnimation (false);
+	}
+	public string GetIconLocation ()
+	{
+		return iconLocation;
+	}
+	public string getIconName()
+	{
+		return iconName;
 	}
 }
 

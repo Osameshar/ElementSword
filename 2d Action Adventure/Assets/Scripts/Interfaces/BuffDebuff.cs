@@ -14,4 +14,7 @@ public interface BuffDebuff
 
 	void onEnd(Stats stats);
 
+	string GetIconLocation ();
+
+	string getIconName ();
 }

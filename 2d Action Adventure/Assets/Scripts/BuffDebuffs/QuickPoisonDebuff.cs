@@ -6,6 +6,8 @@ public class QuickPoisonDebuff : BuffDebuff
 	private int remainingDuration;
 	private string name;
 	private float debuffStrength;
+	private string iconLocation = "Enemy";
+	private string iconName = "Poison";
 
 	public QuickPoisonDebuff()
 	{
@@ -38,5 +40,14 @@ public class QuickPoisonDebuff : BuffDebuff
 	public void onEnd(Stats stats)
 	{
 
+	}
+	public string GetIconLocation ()
+	{
+		return iconLocation;
+	}
+	
+	public string getIconName ()
+	{
+		return iconName;
 	}
 }

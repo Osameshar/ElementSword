@@ -6,7 +6,8 @@ public class QuickFireDebuff : BuffDebuff
 	private int remainingDuration;
 	private string name;
 	private float debuffStrength;
-
+	private string iconLocation = "Enemy";
+	private string iconName = "Fire";
 	public QuickFireDebuff()
 	{
 		name = "QuickFireDebuff";
@@ -37,5 +38,14 @@ public class QuickFireDebuff : BuffDebuff
 	{
 		//remainingDuration = baseDuration;
 		stats.alterToughness(debuffStrength);
+	}
+	public string GetIconLocation ()
+	{
+		return iconLocation;
+	}
+	
+	public string getIconName ()
+	{
+		return iconName;
 	}
 }

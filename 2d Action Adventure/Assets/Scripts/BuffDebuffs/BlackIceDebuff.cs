@@ -8,6 +8,8 @@ public class BlackIceDebuff : BuffDebuff {
 	private const int DURATION_MODIFIER = 1;
 	private const int DAMAGE_MODIFIER = 20;
 	private float damage;
+	private string iconLocation = "Enemy";
+	private string iconName = "BlackIce";
 
 	public BlackIceDebuff (int coldStacks, int poisonStacks)
 	{
@@ -38,5 +40,12 @@ public class BlackIceDebuff : BuffDebuff {
 	{
 
 	}
-
+	public string GetIconLocation ()
+	{
+		return iconLocation;
+	}
+	public string getIconName()
+	{
+		return iconName;
+	}
 }

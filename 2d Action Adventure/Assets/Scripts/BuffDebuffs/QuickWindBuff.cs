@@ -6,6 +6,8 @@ public class QuickWindBuff : BuffDebuff
 	private int remainingDuration;
 	private string name;
 	private float buffStrength;
+	private string iconLocation = "Player";
+	private string iconName = "Wind";
 
 	public QuickWindBuff()
 	{
@@ -38,5 +40,14 @@ public class QuickWindBuff : BuffDebuff
 	public void onEnd(Stats stats)
 	{
 		stats.alterMovementModifier(-buffStrength);
+	}
+	public string GetIconLocation ()
+	{
+		return iconLocation;
+	}
+	
+	public string getIconName ()
+	{
+		return iconName;
 	}
 }
