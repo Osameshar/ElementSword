@@ -3,8 +3,13 @@ using System.Collections;
 using UnityEngine.EventSystems;
 
 public class PauseGame : MonoBehaviour {
-	
+
 	public GameObject pauseMenu;
+	public GameObject controlsMenu;
+	public GameObject spellbookMenu;
+	public GameObject spellbookPage1;
+	public GameObject spellbookPage2;
+	private int spellbookPage;
 	private GameObject inputManager;
 	private bool isEnabled = false;
 	private GameObject spellbookButton;
@@ -27,14 +32,38 @@ public class PauseGame : MonoBehaviour {
 		counter = 0;
 		numButtons = buttonList.Count - 1;
 		nextInput = Time.time;
+		spellbookPage = 1;
+	}
+	public void OnClickSpellbookNextPage1()
+	{
+		spellbookPage1.SetActive (false);
+		spellbookPage2.SetActive (true);
+
+	}
+	public void OnClickSpellbookNextPage2()
+	{
+		spellbookPage2.SetActive (false);
+		spellbookPage1.SetActive (true);		
 	}
 	public void OnClickControls()
 	{
-
+		pauseMenu.SetActive (false);
+		controlsMenu.SetActive (true);
+	}
+	public void OnClickBackControls()
+	{
+		controlsMenu.SetActive(false);
+		pauseMenu.SetActive (true);
+	}
+	public void OnClickBackSpellbook()
+	{
+		spellbookMenu.SetActive(false);
+		pauseMenu.SetActive (true);
 	}
 	public void OnClickSpellBook()
 	{
-
+		pauseMenu.SetActive (false);
+		spellbookMenu.SetActive (true);
 	}
 	public void OnClickQuit()
 	{
