@@ -29,6 +29,7 @@ public class IgniteTheBlight : Spell {
 
 	public void ExecuteAttack (GameObject enemy, GameObject player)
 	{
+		enemy.transform.Find ("PersonalAnim").gameObject.GetComponent<Animator>().SetTrigger("IgniteTheBlight");
 		BuffDebuffManager bdmanager = enemy.GetComponent<BuffDebuffManager> ();
 		int fireStacks = bdmanager.GetElementStacks()[0];
 		int poisonStacks = bdmanager.GetElementStacks()[2];
