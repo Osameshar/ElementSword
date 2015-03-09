@@ -26,6 +26,8 @@ public class ToxicDebuff: BuffDebuff {
 	}
 	public void onApply (Stats stats)
 	{
+		stats.gameObject.transform.Find ("PersonalAnim").gameObject.GetComponent<Animator>().SetBool("Toxic",true);
+		stats.gameObject.transform.Find ("PersonalAnim").gameObject.GetComponent<Animator>().SetBool("ToxicR",true);
 	}
 	public void onSecond (Stats stats)
 	{
@@ -34,6 +36,7 @@ public class ToxicDebuff: BuffDebuff {
 	}
 	public void onEnd (Stats stats)
 	{
+		stats.gameObject.transform.Find ("PersonalAnim").gameObject.GetComponent<Animator>().SetBool("ToxicR",false);
 	}
 	public string GetIconLocation ()
 	{

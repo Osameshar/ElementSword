@@ -26,6 +26,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: ToxicR
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -38,6 +44,26 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!1101 &110106420
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110264268}
+  m_DstState: {fileID: 110202042}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: ToxicR
+    m_EventTreshold: 0
+    m_ExitTime: 2
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110126090
 Transition:
   serializedVersion: 2
@@ -98,7 +124,7 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110184442
+--- !u!1101 &110188140
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
@@ -106,14 +132,14 @@ Transition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_SrcState: {fileID: 110208580}
-  m_DstState: {fileID: 110202042}
-  m_TransitionDuration: .100000001
+  m_DstState: {fileID: 110264268}
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: Toxic
+    m_ConditionEvent: ToxicR
     m_EventTreshold: 0
-    m_ExitTime: .899999976
+    m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -149,7 +175,7 @@ State:
   m_Motions:
   - {fileID: 0}
   m_ParentStateMachine: {fileID: 110742958}
-  m_Position: {x: 552, y: -72, z: 0}
+  m_Position: {x: 528, y: 36, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -198,6 +224,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110264268
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ToxicR
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 47737f173df803e44b33558e07b70cf9, type: 2}
+  m_ParentStateMachine: {fileID: 110742958}
+  m_Position: {x: 264, y: 12, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110742958
 StateMachine:
   serializedVersion: 2
@@ -211,29 +252,34 @@ StateMachine:
   - {fileID: 110208580}
   - {fileID: 110231568}
   - {fileID: 110219930}
+  - {fileID: 110264268}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110219930}
+      first: {fileID: 110264268}
       second:
-      - {fileID: 110137034}
-    data:
-      first: {fileID: 110231568}
-      second:
-      - {fileID: 110191612}
-    data:
-      first: {fileID: 110208580}
-      second:
-      - {fileID: 110184442}
-    data:
-      first: {fileID: 110202042}
-      second: []
+      - {fileID: 110106420}
     data:
       first: {fileID: 0}
       second:
       - {fileID: 110126090}
       - {fileID: 110170150}
+    data:
+      first: {fileID: 110202042}
+      second: []
+    data:
+      first: {fileID: 110208580}
+      second:
+      - {fileID: 110188140}
+    data:
+      first: {fileID: 110231568}
+      second:
+      - {fileID: 110191612}
+    data:
+      first: {fileID: 110219930}
+      second:
+      - {fileID: 110137034}
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: -216, y: 12, z: 0}
+  m_AnyStatePosition: {x: -228, y: 36, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
