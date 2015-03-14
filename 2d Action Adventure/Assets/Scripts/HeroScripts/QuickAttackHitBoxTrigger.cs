@@ -39,6 +39,7 @@ public class QuickAttackHitBoxTrigger : MonoBehaviour
 			combat.GetCurrentAttack().ExecuteAttack(other.gameObject,player);
 			bar.updateGameObject(other.gameObject);
 			stackNum.updateIconsOnHit(other.gameObject);
+			GetComponent<BoxCollider2D>().enabled = false;
 		}
 	}
 

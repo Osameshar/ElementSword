@@ -9,12 +9,11 @@ public class PauseGame : MonoBehaviour {
 	public GameObject spellbookMenu;
 	public GameObject spellbookPage1;
 	public GameObject spellbookPage2;
-	private int spellbookPage;
 	private GameObject inputManager;
 	private bool isEnabled = false;
-	private GameObject spellbookButton;
-	private GameObject quitButton;
-	private GameObject controlsButton;
+	public GameObject spellbookButton;
+	public GameObject quitButton;
+	public GameObject controlsButton;
 	private ArrayList buttonList = new ArrayList();
 	private int counter;
 	private int numButtons;
@@ -23,16 +22,12 @@ public class PauseGame : MonoBehaviour {
 	void Start()
 	{
 		inputManager = GameObject.Find ("Input Manager");
-		spellbookButton = GameObject.Find ("SpellbookButton");
-		quitButton = GameObject.Find("QuitButton");
-		controlsButton = GameObject.Find ("ControlsButton");
+		buttonList.Add (controlsButton);
 		buttonList.Add (spellbookButton);
 		buttonList.Add (quitButton);
-		buttonList.Add (controlsButton);
 		counter = 0;
 		numButtons = buttonList.Count - 1;
-		nextInput = Time.time;
-		spellbookPage = 1;
+		nextInput = Time.realtimeSinceStartup;
 	}
 	public void OnClickSpellbookNextPage1()
 	{
@@ -82,13 +77,16 @@ public class PauseGame : MonoBehaviour {
 		{
 			setActiveFalse ();
 		}
-		CheckVerticalInput ();
+		if(isEnabled)
+		{
+			CheckVerticalInput ();
+		}
 	}
 	void CheckVerticalInput ()
 	{
 		float move = Input.GetAxis ("Vertical");
 		
-		if(Time.time > nextInput)
+		if(Time.realtimeSinceStartup > nextInput)
 		{
 			if(move < 0)
 			{
@@ -101,7 +99,7 @@ public class PauseGame : MonoBehaviour {
 				decrementCounter();
 				EventSystem.current.SetSelectedGameObject((GameObject)buttonList[counter], null);
 			}
-			nextInput = Time.time + 1f;
+			nextInput = Time.realtimeSinceStartup + 1f;
 		}
 	}
 
@@ -120,7 +118,6 @@ public class PauseGame : MonoBehaviour {
 		pauseMenu.SetActive (true);
 		Time.timeScale = 0.0f;
 		isEnabled = true;
-
 	}
 	
 	void incrementCounter ()

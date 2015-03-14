@@ -23,9 +23,18 @@ public class ProjectileController : MonoBehaviour
 		stackNum = gui.GetComponent<StackNumbers> ();
 		projectileAnim = GetComponent<Animator> ();
 
+		StartCoroutine (ProjLifeTime ());
 		UpdateActiveElementVariables (Dattack);
 	}
-	
+
+	IEnumerator ProjLifeTime()
+	{
+		yield return new WaitForSeconds (3f);
+		Destroy (this.gameObject);
+		
+	}
+
+
 	void OnTriggerEnter2D(Collider2D other) 
 	{
 		if (other.gameObject.tag == "Enemy") 

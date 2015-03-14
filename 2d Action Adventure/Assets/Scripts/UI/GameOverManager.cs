@@ -4,7 +4,7 @@ public class GameOverManager : MonoBehaviour
 {
 	public Stats stats;       // Reference to the player's health.
 	public float restartDelay = 10f;         // Time to wait before restarting the level
-	
+	bool gameOver = false;
 	
 	Animator anim;                          // Reference to the animator component.
 	float restartTimer;                     // Timer to count up to restarting the level
@@ -21,8 +21,9 @@ public class GameOverManager : MonoBehaviour
 	void Update ()
 	{
 		// If the player has run out of health...
-		if(stats.getHealth() <= 0)
+		if(stats.getHealth() <= 0 || gameOver)
 		{
+			gameOver = true;
 			// ... tell the animator the game is over.
 			anim.SetTrigger ("GameOver");
 			
@@ -33,6 +34,7 @@ public class GameOverManager : MonoBehaviour
 			if(restartTimer >= restartDelay)
 			{
 				// .. then reload the currently loaded level.
+				gameOver = false;
 				Application.LoadLevel(Application.loadedLevel);
 			}
 		}

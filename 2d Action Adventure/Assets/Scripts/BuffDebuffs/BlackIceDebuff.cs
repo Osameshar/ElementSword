@@ -11,9 +11,9 @@ public class BlackIceDebuff : BuffDebuff {
 	private string iconLocation = "Enemy";
 	private string iconName = "BlackIce";
 
-	public BlackIceDebuff (int coldStacks, int poisonStacks)
+	public BlackIceDebuff (int frostStacks, int poisonStacks)
 	{
-		remainingDuration = DURATION_MODIFIER * coldStacks;
+		remainingDuration = DURATION_MODIFIER * frostStacks;
 		damage = (DAMAGE_MODIFIER * poisonStacks)/remainingDuration;
 		name = "BlackIceDebuff";		
 	}

@@ -17,6 +17,9 @@ public class AttackLibrary : MonoBehaviour
 		allAttacks.Add ("Toxic", new Toxic ());
 		allAttacks.Add ("IgniteTheBlight", new IgniteTheBlight ());
 		allAttacks.Add ("BlackIce", new BlackIce ());
+		allAttacks.Add ("MeteorShower", new MeteorShower ());
+		allAttacks.Add ("SteamField", new SteamField ());
+		allAttacks.Add ("DistortionWave", new DistortionWave ());
 	}
 
 	public Attack GetAttackByName(string name)

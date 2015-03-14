@@ -12,10 +12,13 @@ public class SpellBook
 		GameObject libs = GameObject.FindWithTag ("Libraries");
 		attackLibrary = libs.GetComponent<AttackLibrary>();
 
+		EquipSpell("MeteorShower");
 		EquipSpell("FrostShield");
 		EquipSpell("Toxic");
 		EquipSpell("IgniteTheBlight");
 		EquipSpell("BlackIce");
+		EquipSpell ("SteamField");
+		EquipSpell ("DistortionWave");
 	}
 
 	public void EquipSpell(string spellName)

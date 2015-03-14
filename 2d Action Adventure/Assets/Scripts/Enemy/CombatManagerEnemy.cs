@@ -15,7 +15,10 @@ public class CombatManagerEnemy : MonoBehaviour
 	}
 
 	void Update () {
-	
+		if(stats.getHealth() <= 0)
+		{
+			Destroy(this.gameObject);
+		}
 	}
 	public float GetDamage()
 	{

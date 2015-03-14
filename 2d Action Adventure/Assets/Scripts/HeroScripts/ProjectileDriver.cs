@@ -9,10 +9,10 @@ public class ProjectileDriver : MonoBehaviour
 	void Start () 
 	{
 		if(isFacingRight)
-			rigidbody2D.velocity = transform.right * projectileSpeed;
+			GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
 		else
 		{
-			rigidbody2D.velocity = -transform.right * projectileSpeed;
+			GetComponent<Rigidbody2D>().velocity = -transform.right * projectileSpeed;
 			transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
 		}
 	}

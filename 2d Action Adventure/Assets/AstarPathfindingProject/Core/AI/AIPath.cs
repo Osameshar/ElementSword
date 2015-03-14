@@ -162,7 +162,7 @@ public class AIPath : MonoBehaviour {
 		//Cache some other components (not all are necessarily there)
 		controller = GetComponent<CharacterController>();
 		navController = GetComponent<NavmeshController>();
-		rigid = rigidbody2D;
+		rigid = GetComponent<Rigidbody2D>();
 	}
 
 

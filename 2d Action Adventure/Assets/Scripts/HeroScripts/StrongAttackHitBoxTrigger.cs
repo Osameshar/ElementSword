@@ -34,6 +34,7 @@ public class StrongAttackHitBoxTrigger : MonoBehaviour
 		{
 			combat.GetStrongAttack().ExecuteAttack(other.gameObject,player);
 			bar.updateGameObject(other.gameObject);
+			GetComponent<BoxCollider2D>().enabled = false;
 		}
 	}
 }

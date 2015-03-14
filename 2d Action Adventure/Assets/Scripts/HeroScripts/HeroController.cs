@@ -36,10 +36,10 @@ public class HeroController : MonoBehaviour
 	{
 		if ((grounded || !doubleJump))
 		{		
-			Vector2 v = rigidbody2D.velocity;
+			Vector2 v = GetComponent<Rigidbody2D>().velocity;
 			v.y = 0;
-			rigidbody2D.velocity = v;
-			rigidbody2D.AddForce (new Vector2 (0, stats.jumpForce));
+			GetComponent<Rigidbody2D>().velocity = v;
+			GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, stats.jumpForce));
 			if (!doubleJump && !grounded)
 				doubleJump = true;
 		}
@@ -76,7 +76,7 @@ public class HeroController : MonoBehaviour
 	public void MoveHero(float move)
 	{
 		anim.SetFloat("Speed",Mathf.Abs (move));
-		rigidbody2D.velocity = new Vector2 (move * stats.GetCurrentMovementSpeed(), rigidbody2D.velocity.y);
+		GetComponent<Rigidbody2D>().velocity = new Vector2 (move * stats.GetCurrentMovementSpeed(), GetComponent<Rigidbody2D>().velocity.y);
 		
 		if (move > 0 && !facingRight)
 			Flip ();

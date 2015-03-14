@@ -20,8 +20,8 @@ public class CombatManager : MonoBehaviour
 
 
 	public Transform projSpawn;
-	public GameObject projectileRight;
 	public GameObject projectileLeft;
+	public GameObject projectileRight;
 
 	private bool invulnerable = false;
 	public float timeBetweenDamage = 1f;
