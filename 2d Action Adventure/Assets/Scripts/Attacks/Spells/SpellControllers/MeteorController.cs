@@ -15,12 +15,12 @@ public class MeteorController : MonoBehaviour {
 		gui = GameObject.FindGameObjectWithTag ("GUIManager");
 		bar = gui.GetComponent<EnemyHealthBar> ();
 		damage = 20;
-		circleCollider = new CircleCollider2D ();
+		//circleCollider = new CircleCollider2D ();
 		trigger = new CircleCollider2D ();
-		circleCollider = gameObject.AddComponent<CircleCollider2D>();
+		//circleCollider = gameObject.AddComponent<CircleCollider2D>();
 		trigger = gameObject.AddComponent<CircleCollider2D> ();
 		trigger.isTrigger = true;
-		circleCollider.radius = 0.7f;
+		//circleCollider.radius = 0.7f;
 		trigger.radius = 1f;
 
 
@@ -41,7 +41,6 @@ public class MeteorController : MonoBehaviour {
 			other.gameObject.GetComponent<CombatManagerEnemy>().TakeDamage(damage,null,true);
 			bar.updateGameObject(other.gameObject);
 			Destroy(this.gameObject);
-
 		}
 
 	}
