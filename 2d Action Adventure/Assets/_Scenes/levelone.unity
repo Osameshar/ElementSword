@@ -1925,6 +1925,30 @@ Prefab:
       propertyPath: controlsButton
       value: 
       objectReference: {fileID: 1576691838}
+    - target: {fileID: 118626, guid: 550577d3d9a2c78428dd12f6ab1ab3df, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133894, guid: 550577d3d9a2c78428dd12f6ab1ab3df, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 124404, guid: 550577d3d9a2c78428dd12f6ab1ab3df, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 178348, guid: 550577d3d9a2c78428dd12f6ab1ab3df, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416964, guid: 550577d3d9a2c78428dd12f6ab1ab3df, type: 2}
+      propertyPath: m_Text
+      value: 'Quick Attack: O Key or X Button'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456434, guid: 550577d3d9a2c78428dd12f6ab1ab3df, type: 2}
+      propertyPath: m_Text
+      value: 'Spell Cast: P Key or Y Button'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 550577d3d9a2c78428dd12f6ab1ab3df, type: 2}
   m_IsPrefabParent: 0

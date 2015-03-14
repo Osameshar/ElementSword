@@ -21,6 +21,11 @@ public class EnemyHealthBar : MonoBehaviour {
 		if(activeFrame)
 		{
 			enemySlider.value = stats.getHealth();
+			if(stats.getHealth() <= 0)
+			{
+				enemyFrame.SetActive(false);
+				activeFrame = false;
+			}
 		}
 	}
 

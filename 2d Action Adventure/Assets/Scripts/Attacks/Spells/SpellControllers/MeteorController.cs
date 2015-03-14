@@ -8,6 +8,7 @@ public class MeteorController : MonoBehaviour {
 	private float damage;
 	private CircleCollider2D circleCollider;
 	private CircleCollider2D trigger;
+	private float velocity;
 	// Use this for initialization
 	void Start () 
 	{	
@@ -21,9 +22,8 @@ public class MeteorController : MonoBehaviour {
 		trigger.isTrigger = true;
 		circleCollider.radius = 0.7f;
 		trigger.radius = 1f;
-		float xVRand = Random.Range (0f, 30f);
-		float yVRand = Random.Range (-4f, 0f);
-		GetComponent<Rigidbody2D> ().velocity = new Vector2 (xVRand, yVRand);
+
+
 
 		StartCoroutine (HitBoxLifeTime ());
 	}
@@ -51,5 +51,10 @@ public class MeteorController : MonoBehaviour {
 		{
 			Physics2D.IgnoreCollision(circleCollider,other.collider);
 		}
+	}
+	public void setVelocity(float commonVelocity)
+	{
+		float yVRand = Random.Range (-4f, 0f);
+		GetComponent<Rigidbody2D> ().velocity = new Vector2 (commonVelocity, yVRand);
 	}
 }

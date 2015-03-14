@@ -86,6 +86,13 @@ public class StackNumbers : MonoBehaviour {
 		{
 			updateIcons ();
 		}
+		if(currentTarget != null)
+		{
+			if(currentTarget.GetComponent<Stats>().getHealth() <= 0)
+			{
+				clearDebuffs();
+			}
+		}
 	}
 	public void updateElementStacks(int numStacks, GameObject elementStacks, GameObject elementFrame)
 	{
@@ -173,5 +180,18 @@ public class StackNumbers : MonoBehaviour {
 			((GameObject)debuffFrames[currentDebuffIndex]).SetActive(false);
 
 		}
+	}
+	public void clearDebuffs()
+	{
+		int i = 0;
+		foreach (GameObject g in debuffFrames)
+		{
+			((GameObject)debuffFrames[i]).SetActive(false);
+			i++;
+		}
+		updateElementStacks (0,fireStacks,fireFrame);
+		updateElementStacks (0,frostStacks,frostFrame);
+		updateElementStacks (0,poisonStacks,poisonFrame);
+		updateElementStacks (0,windStacks,windFrame);
 	}
 }
