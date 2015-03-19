@@ -6,14 +6,14 @@ public class SteamFieldBuff : BuffDebuff {
 	private int remainingDuration;
 	private string name;
 	private string iconLocation = "Player";
-	private string iconName = "SteamFieldBuff";
+	private string iconName = "SteamField";
 	private float healing;
 
 	public SteamFieldBuff (int fireStacks, int frostStacks)
 	{
 		remainingDuration = 1;
 		healing = -10f;
-		name = "SteamFieldBuff";
+		name = "SteamField";
 	}
 
 	public int GetRemainingDuration ()
